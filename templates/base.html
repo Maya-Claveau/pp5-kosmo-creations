@@ -6,29 +6,34 @@
 <head>
     {% block meta %}
     <!-- required meta tags -->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="thoughtful handmade jewelry gift for any special occasions, jewelry including bracelet, necklace, anklet, ankel bracelet and gift sets, online shopping for last minute gifts, online shopping for custome made gift">
+    <meta name="keywords"
+        content="crystal necklace, crystal bracelet, crystal anklet, crystal ankle bracelet, gift idea for mother, gift idea for her, gift idea for teacher, gift idea for wife, gift idea for sisters, gift idea for him, gift idea for husband, gift idea for grandmother, special occasions, christams gift, thanksgiving gift, anniversary gift, graduation gift, new mom gift, name day gift, birthday gift, custom made jewelry, thoughtful gift, last minute gift">
+    <meta name="author" content="Maya Claveau" />
     {% endblock %}
 
     {% block extra_meta %}
     {% endblock %}
 
-    <!-- bootstrap CSS -->
+    <!-- jquery and bootstrap CSS -->
     {% block corecss %}
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
-    <!-- bootstrap JS -->
+
     {% block corejs %}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-    </script>
     {% endblock %}
 
     {% block extra_js %}
@@ -40,9 +45,10 @@
 <body>
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>Boutique</strong> Ado</h2>
+                    <img src="/media/anklet-georgia-happy.png" alt="logo of kosmo">
+                    <!-- <h2 class="logo-font text-black my-0"><strong>Kosmo</strong> Creations</h2> -->
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -115,11 +121,19 @@
     {% endblock %}
 
     {% block postloadjs %}
-    {% endblock %}
-
-
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/4c01cc9050.js" crossorigin="anonymous"></script>
+
+    <!-- bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
+    </script>
+    <!-- <script src="{% static 'js/base.js' %}" type="module"></script> -->
+    {% endblock %}
+
 </body>
 
 </html>
