@@ -55,11 +55,11 @@
 <body>
     <!-- nav bar -->
     <header class="container-fluid fixed-top">
-        <nav id="topnav" class="row navbar navbar-expand-md navbar-light pt-lg-2 d-none d-lg-flex">
+        <div id="topnav" class="row navbar navbar-expand-md navbar-light pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="">
-                    <div class="input-group w-60">
-                        <input class="form-control border rounded-1 me-2" type="text" name="q" placeholder="Search"
+                    <div class="input-group w-50">
+                        <input class="form-control border rounded-1" type="text" name="q" placeholder="Search"
                             aria-label="Search">
                         <div class="input-group-append">
                             <button class="form-control btn border btn-info rounded-1" type="submit">
@@ -72,18 +72,18 @@
                 </form>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
-                <a href=" {% url 'home' %}" class="navbar-brand main-logo-link">
-                    <h2 class="logo-font text-white mt-4"><strong>Kosmo</strong> Creations</h2>
-                    <!-- need to check why the img doesn't work and center the logo -->
-                    <!-- <img src="/media/anklet-georgia-happy.png" alt="logo of kosmo"> -->
+                <a href="{% url 'home' %}" class="navbar-brand main-logo-link">
+                    <h2 class=" logo-font text-white mt-4"><strong>Kosmo</strong><span class="text-white"></span>
+                        Creations</span></h2>
+                    <!-- <img src="/media/main-logo.png" alt="logo of kosmo" width="180" class="rounded-4"> -->
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-right">
-                <ul class="list-inline list-unstyled my-0 me-lg-0">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-center text-lg-end my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-white nav-link" href="#" id="user-options" data-bs-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
+                            <div class="text-center pe-2">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">Account</p>
                             </div>
@@ -104,7 +104,7 @@
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link"
                             href="">
-                            <div class="text-center">
+                            <div class="text-center pe-2">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
@@ -118,7 +118,7 @@
                     </li>
                 </ul>
             </div>
-        </nav>
+        </div>
     </header>
 
 

@@ -6,10 +6,12 @@ html {
 }
 
 body {
+
     background: url('/media/girl-pearl-necklace-back.png') no-repeat center center fixed;
     background-size: cover;
+    background-color: white;
     height: calc(100vh - 140px);
-    color: #ffffff;
+    color: white;
     font-family: 'Barlow 400';
 }
 
@@ -79,6 +81,6 @@ body {
     }
 
     .header-container {
-        padding-top: 140px;
+        padding-top: 140px !important;
     }
 }
