@@ -34,6 +34,16 @@
 
 
     {% block corejs %}
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4c01cc9050.js" crossorigin="anonymous"></script>
+
+    <!-- bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
+    </script>
     {% endblock %}
 
     {% block extra_js %}
@@ -48,7 +58,7 @@
         <nav id="topnav" class="row navbar navbar-expand-md navbar-light pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="">
-                    <div class="input-group w-50 mx-auto">
+                    <div class="input-group w-60">
                         <input class="form-control border rounded-1 me-2" type="text" name="q" placeholder="Search"
                             aria-label="Search">
                         <div class="input-group-append">
@@ -63,15 +73,15 @@
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
                 <a href=" {% url 'home' %}" class="navbar-brand main-logo-link">
-                    <h2 class="logo-font text-black mt-4"><strong>Kosmo</strong> Creations</h2>
+                    <h2 class="logo-font text-white mt-4"><strong>Kosmo</strong> Creations</h2>
                     <!-- need to check why the img doesn't work and center the logo -->
                     <!-- <img src="/media/anklet-georgia-happy.png" alt="logo of kosmo"> -->
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-right">
-                <ul class="list-inline list-unstyled my-0">
+                <ul class="list-inline list-unstyled my-0 me-lg-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-bs-toggle="dropdown"
+                        <a class="text-white nav-link" href="#" id="user-options" data-bs-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
@@ -81,10 +91,10 @@
                         <ul class="dropdown-menu border-0">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <li><a class="dropdown-item" type="button">Product Management</a></li>
+                            <li><a href="" class="dropdown-item" type="button">Product Management</a></li>
                             {% endif %}
-                            <li><a class="dropdown-item" type="button">My Profile</a></li>
-                            <li><a class="dropdown-item" type="button">Logout</a></li>
+                            <li><a href="" class="dropdown-item" type="button">My Profile</a></li>
+                            <li><a href="{% url 'account_logout' %}" class="dropdown-item" type="button">Logout</a></li>
                             {% else %}
                             <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
                             <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
@@ -92,7 +102,7 @@
                         </ul>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link"
                             href="">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
@@ -112,7 +122,7 @@
     </header>
 
 
-    {% if messages%}
+    {% if messages %}
     <div class="message-container"></div>
     {% endif %}
 
@@ -123,16 +133,6 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/4c01cc9050.js" crossorigin="anonymous"></script>
-
-    <!-- bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
-    </script>
     <!-- <script src="{% static 'js/base.js' %}" type="module"></script> -->
     {% endblock %}
 

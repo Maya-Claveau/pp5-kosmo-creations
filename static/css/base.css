@@ -6,9 +6,9 @@ html {
 }
 
 body {
-    background: url('/media/necklace-white-pearls.jpg') no-repeat center center fixed;
+    background: url('/media/girl-pearl-necklace-back.png') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 140px);
     color: #ffffff;
     font-family: 'Barlow 400';
 }
@@ -36,10 +36,10 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
+/* .btn-black {
     background: black;
     color: white;
-}
+} */
 
 .shop-now-button:hover,
 .shop-now-button:active,
@@ -59,7 +59,7 @@ body {
     border: 1px solid black !important;
 }
 
-/* -------------------------------- Media Queries */
+/* -------------------------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -79,6 +79,6 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 140px;
     }
 }
