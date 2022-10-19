@@ -6,10 +6,8 @@ html {
 }
 
 body {
-
-    background: url('/media/girl-pearl-necklace-back.png') no-repeat center center fixed;
+    background: url('/media/background-img.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-color: white;
     height: calc(100vh - 140px);
     color: white;
     font-family: 'Barlow 400';
