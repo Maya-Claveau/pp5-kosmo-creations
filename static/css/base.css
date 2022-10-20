@@ -36,11 +36,6 @@ body {
     min-width: 260px;
 }
 
-/* .btn-black {
-    background: black;
-    color: white;
-} */
-
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -59,6 +54,14 @@ body {
     border: 1px solid black !important;
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+}
 
 /* -------------------------------------------------- Media Queries */
 

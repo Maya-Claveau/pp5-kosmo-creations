@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Jewelries</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="jewelry-container col-10 offset-1">
+            <div class="row mt-1 mb-1"></div>
+            <div class="row">
+                {% for jewelry in jewelries %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 border-0">
+                        {% if jewelry.image %}
+                        <a href="">
+                            <img src="{{ jewelry.image.url }}" class="card-img-top img-fluid" alt="{{ jewelry.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img src="{{ MEDIA_URL }}no-image.png" class="card-img-top img-fluid"
+                                alt="{{ jewelry.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body">
+                            <p class="card-title text-black">{{ jewelry.name }} <a href="#"
+                                    class="btn btn-primary ms-5">Edit</a>
+                                <a href="#" class="btn btn-danger ms-2">Delete</a>
+                            </p>
+                        </div>
+                        <div class=" card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left text-black font-weight-bold">
+                                        €{{ jewelry.price }}
+                                    </p>
+                                    {% if jewelry.rating %}
+                                    <small class="text-muted"><i class="fas fa-star me-1"></i>
+                                        {{ jewelry.rating }} / 5
+                                    </small>
+                                    {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-3">
+                    <hr class="text-black">
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-3">
+                    <hr class="text-black">
+                </div>
+                {% endif %}
+
+                {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none mb-3">
+                    <hr class="text-black">
+                </div>
+                {% endif %}
+
+                {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block mb-3">
+                    <hr class="text-black">
+                </div>
+                {% endif %}
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
