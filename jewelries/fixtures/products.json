@@ -1,0 +1,298 @@
+[{
+    "pk": 1,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Bordo Anklet",
+        "description": "Beautiful red and green crystals with golden details in between, a chain that can be adjusted in lengh for a better fit. Small green crytal at the end of chain. The real sea shell made this anklet really cute.",
+        "price": 19.99,
+        "category": 1,
+        "rating": 4.7,
+        "image": "anklet-bordo.jpg"
+    }
+}, {
+    "pk": 2,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Bright Red Anklet",
+        "description": "Bright red crystals with golden details in between, with a adjustable chain closure. The golden starfish charm is there to catch some attention.",
+        "price": 19.99,
+        "category": 1,
+        "rating": 4.8,
+        "image": "anklet-bright-red.jpg"
+    }
+}, {
+    "pk": 3,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Coral Anklet",
+        "description": "Made from crystals with golden details, adjustable chain closure. The golden seashell charm makes it perfect for a warm day must have accessories.",
+        "price": 19.99,
+        "category": 1,
+        "rating": 4.8,
+        "image": "anklet-coral.jpg"
+    }
+}, {
+    "pk": 4,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Jade Green Anklet",
+        "description": "Made from Jade green crystals with golden details in between, adjustable chain closure. The golden starfish charm reminds you everything from the sea.",
+        "price": 19.99,
+        "category": 1,
+        "rating": 4.6,
+        "image": "anklet-green.jpg"
+    }
+}, {
+    "pk": 5,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Multi Yellow Anklet",
+        "description": "Made from crystals with golden details in between, adjustable chain closure for a better fit. With golden starfish charm for extraordinary feel.",
+        "price": 19.99,
+        "category": 1,
+        "rating": 4.9,
+        "image": "anklet-multi-yellow.jpg"
+    }
+}, {
+    "pk": 6,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Pearls Anklet",
+        "description": "Made from natrual white pearls, with adjustable chain closure. The golden seashell charm reminds you about summer and beach. This simple designed item will match with everything from your wardrobe.",
+        "price": 21.99,
+        "category": 1,
+        "rating": 4.7,
+        "image": "anklet-pearls.jpg"
+    }
+}, {
+    "pk": 7,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Red Anklet",
+        "description": "Made from red crystals with golden details in between. Adjustable chain closure, and small turquoise crystal at the end. The golden seashell charm make it extra special and unique.",
+        "price": 19.99,
+        "category": 1,
+        "rating": 4.4,
+        "image": "anklet-red.jpg"
+    }
+}, {
+    "pk": 8,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Turquoise White Anklet",
+        "description": "Made from white and turquoise crystals with golden details in between. Adjustable chain closure, and small turquoise crystal at the end. The golden starfish makes it one of a kind.",
+        "price": 19.99,
+        "category": 1,
+        "rating": 4.5,
+        "image": "anklet-turquoise-white.jpg"
+    }
+}, {
+    "pk": 9,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Turquoise Anklet",
+        "description": "Made from lighter and darker shade of turquoise crystals with golden details in between. Adjustable chain closure, and small turquoise crystal at the end. The real seashell makes it one of a kind. A perfect gift for a sea lover.",
+        "price": 19.99,
+        "category": 1,
+        "rating": 4.7,
+        "image": "anklet-turquoise.jpg"
+    }
+}, {
+    "pk": 10,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Beige Bracelet",
+        "description": "Made from crystals with natual stone look and golden details in between. Adjustable chain closure. Small jade crytal at the end makes it extra special.",
+        "price": 23.99,
+        "category": 2,
+        "rating": 4.4,
+        "image": "bracelet-beige.jpg"
+    }
+}, {
+    "pk": 11,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Black Bracelet",
+        "description": "Made from black crystals with golden details in between. Adjustable chain closure. The mix of turquoise crytals makes it extra attractive.",
+        "price": 23.99,
+        "category": 2,
+        "rating": 4.9,
+        "image": "bracelet-black.jpg"
+    }
+}, {
+    "pk": 12,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Brown Bracelet",
+        "description": "Made from crystals with natual stone look in a lighter shade and golden details in between. Adjustable chain closure. Small jade crytal at the end makes it extra special. The neutral color will make this bracelet match with your favorite outfits seemless.",
+        "price": 23.99,
+        "category": 2,
+        "rating": 4.4,
+        "image": "bracelet-brown.jpg"
+    }
+}, {
+    "pk": 13,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Jade-Green Bracelet",
+        "description": "Made from green crystals with golden details in between. Adjustable chain closure. Each crytal is in their unique shape makes it extra attractive.",
+        "price": 23.99,
+        "category": 2,
+        "rating": 4.5,
+        "image": "bracelet-green.jpg"
+    }
+}, {
+    "pk": 14,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Multi Green Bracelet",
+        "description": "A mix of green and blue crystals with golden details in between. Adjustable chain closure. Each color compensate each other in a beautiful way. If you are looking for one of a kind jewelry, this might be the one.",
+        "price": 23.99,
+        "category": 2,
+        "rating": 4.4,
+        "image": "bracelet-green-blue.jpg"
+    }
+}, {
+    "pk": 15,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Light Green Bracelet",
+        "description": "A mix of light green crystals with golden details in between. Adjustable chain closure. Each crytal is in their unique shape makes it extra attractive.",
+        "price": 23.99,
+        "category": 2,
+        "rating": 4.5,
+        "image": "bracelet-light-green.jpg"
+    }
+}, {
+    "pk": 16,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Purple Bracelet",
+        "description": "A mix of purple crystals with golden details in between. Adjustable chain closure with a small black crytal at the end. Each crytal is in their unique shape and shade makes it extra special.",
+        "price": 23.99,
+        "category": 2,
+        "rating": 4.6,
+        "image": "bracelet-purple.jpg"
+    }
+}, {
+    "pk": 17,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Turquoise Bracelet",
+        "description": "Made from turquoise crystals with golden details in between. Adjustable chain closure and tiny pink crytal at the end. The bright color will make you stand out from the crowd.",
+        "price": 23.99,
+        "category": 2,
+        "rating": 4.8,
+        "image": "bracelet-turquoise.jpg"
+    }
+}, {
+    "pk": 18,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Gold Bomb Necklace",
+        "description": "Made from golden crystals with golden details in between. Adjustable chain closure and tiny clear crytal at the end. This multi string necklace is a bold statement piece.",
+        "price": 36.88,
+        "category": 3,
+        "rating": 4.4,
+        "image": "necklace-beige-gold.jpg"
+    }
+}, {
+    "pk": 19,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Black n' Pearl Necklace",
+        "description": "Made from black crystals and natrual pearls with golden details in between. Adjustable chain closure and tiny red crytal at the end. This is perfect if you are looking for one of a kind classy look.",
+        "price": 36.88,
+        "category": 3,
+        "rating": 4.9,
+        "image": "necklace-black.jpg"
+    }
+}, {
+    "pk": 20,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Aqua Pearl Necklace",
+        "description": "Made from crystals with big pearl in the middle, and golden details in between.",
+        "price": 36.88,
+        "category": 3,
+        "rating": 4.3,
+        "image": "necklace-crystal-pearls.jpg"
+    }
+}, {
+    "pk": 21,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Smoky Necklace",
+        "description": "Made from green and white crystals with golden details in between. The smoky quartz crystal charm is making this necklace a bold statement piece.",
+        "price": 36.88,
+        "category": 3,
+        "rating": 4.2,
+        "image": "necklace-crystal-green.jpg"
+    }
+}, {
+    "pk": 22,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Deep Ocean Necklace",
+        "description": "Made from navy blue crystals, a big white pearl charm with golden details in between. Adjustable chain closure and tiny green crytal at the end. Another simple yet sophisticated classy look necklace.",
+        "price": 36.88,
+        "category": 3,
+        "rating": 4.7,
+        "image": "necklace-dark-blue.jpg"
+    }
+}, {
+    "pk": 23,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Mola Necklace",
+        "description": "Made from dark green with lots of golden details in between. Adjustable chain closure and tiny light green crytal at the end. This multi string necklace is another one of our bold statement piece.",
+        "price": 36.88,
+        "category": 3,
+        "rating": 4.2,
+        "image": "necklace-green-gold.jpg"
+    }
+}, {
+    "pk": 24,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Blood Choker",
+        "description": "Made from red crystals with pearl charm and golden details in between. Adjustable chain closure and tiny light green crytal at the end. Perfect match for your favorite red lipstick.",
+        "price": 36.88,
+        "category": 3,
+        "rating": 4.5,
+        "image": "necklace-red-choker.jpg"
+    }
+}, {
+    "pk": 25,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Pure soul Necklace",
+        "description": "Made from white pearls and golden details in between. The golden charm is making this necklace a timeless piece of art.",
+        "price": 39.88,
+        "category": 3,
+        "rating": 4.7,
+        "image": "necklace-white-pearls.jpg"
+    }
+}, {
+    "pk": 26,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Feel My Love Gift Set",
+        "description": "This beautiful matching gift set includes a necklace and a bracelet. Made from brown crystals with pearls and golden details in between. Adjustable chain closure and tiny light green crytal at the end. Making it great gift for anyone in any age. Love and peace.",
+        "price": 49.88,
+        "category": 4,
+        "rating": 4.7,
+        "image": "necklace-bracelet-set-brown.jpg"
+    }
+}, {
+    "pk": 27,
+    "model": "jewelries.product",
+    "fields": {
+        "name": "Kiss the Sun Gift Set",
+        "description": "This beautiful matching gift set includes a necklace and a bracelet. Made from coral crystals with golden details in between. This playful set making it great gift for anyone in any age. Love and peace.",
+        "price": 49.88,
+        "category": 4,
+        "rating": 4.8,
+        "image": "necklace-bracelet-set-coral.jpg"
+    }
+}]

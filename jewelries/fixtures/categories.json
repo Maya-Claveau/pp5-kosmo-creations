@@ -1,0 +1,36 @@
+[{
+    "pk": 1,
+    "model": "jewelries.category",
+    "fields": {
+        "name": "anklet",
+        "friendly_name": "ankle bracelet"
+    }
+}, {
+    "pk": 2,
+    "model": "jewelries.category",
+    "fields": {
+        "name": "bracelet",
+        "friendly_name": "bracelet"
+    }
+}, {
+    "pk": 3,
+    "model": "jewelries.category",
+    "fields": {
+        "name": "necklace",
+        "friendly_name": "necklace"
+    }
+}, {
+    "pk": 4,
+    "model": "jewelries.category",
+    "fields": {
+        "name": "gift set",
+        "friendly_name": "gift set"
+    }
+}, {
+    "pk": 5,
+    "model": "jewelries.category",
+    "fields": {
+        "name": "offers",
+        "friendly_name": "offers"
+    }
+}]
