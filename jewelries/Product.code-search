@@ -1,0 +1,195 @@
+# Query: Product
+# ContextLines: 1
+
+48 results - 11 files
+
+jewelries/admin.py:
+   1  from django.contrib import admin
+   2: from .models import Product, Category
+   3  
+
+   5  
+   6: class ProductAdmin(admin.ModelAdmin):
+   7      list_display = (
+
+  23  
+  24: admin.site.register(Product, ProductAdmin)
+  25  admin.site.register(Category, CategoryAdmin)
+
+jewelries/models.py:
+  20  class Jewelry(models.Model):
+  21:     """ model for product """
+  22      category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+
+jewelries/urls.py:
+  5      path('', views.all_jewelries, name='jewelries'),
+  6:     path('<product_id>', views.jewelry_detail, name='jewelry_detail')
+  7  ]
+
+jewelries/views.py:
+   1  from django.shortcuts import render, get_object_or_404
+   2: from .models import Product
+   3  
+
+   8  
+   9:     jewelries = Product.objects.all()
+  10  
+
+  17  
+  18: def jewelry_detail(request, product_id):
+  19      """ to render each jewelry with details  """
+  20  
+  21:     jewelry = get_object_or_404(Product, pk=product_id)
+  22  
+
+jewelries/fixtures/products.json:
+    2      "pk": 1,
+    3:     "model": "jewelries.product",
+    4      "fields": {
+
+   13      "pk": 2,
+   14:     "model": "jewelries.product",
+   15      "fields": {
+
+   24      "pk": 3,
+   25:     "model": "jewelries.product",
+   26      "fields": {
+
+   35      "pk": 4,
+   36:     "model": "jewelries.product",
+   37      "fields": {
+
+   46      "pk": 5,
+   47:     "model": "jewelries.product",
+   48      "fields": {
+
+   57      "pk": 6,
+   58:     "model": "jewelries.product",
+   59      "fields": {
+
+   68      "pk": 7,
+   69:     "model": "jewelries.product",
+   70      "fields": {
+
+   79      "pk": 8,
+   80:     "model": "jewelries.product",
+   81      "fields": {
+
+   90      "pk": 9,
+   91:     "model": "jewelries.product",
+   92      "fields": {
+
+  101      "pk": 10,
+  102:     "model": "jewelries.product",
+  103      "fields": {
+
+  112      "pk": 11,
+  113:     "model": "jewelries.product",
+  114      "fields": {
+
+  123      "pk": 12,
+  124:     "model": "jewelries.product",
+  125      "fields": {
+
+  134      "pk": 13,
+  135:     "model": "jewelries.product",
+  136      "fields": {
+
+  145      "pk": 14,
+  146:     "model": "jewelries.product",
+  147      "fields": {
+
+  156      "pk": 15,
+  157:     "model": "jewelries.product",
+  158      "fields": {
+
+  167      "pk": 16,
+  168:     "model": "jewelries.product",
+  169      "fields": {
+
+  178      "pk": 17,
+  179:     "model": "jewelries.product",
+  180      "fields": {
+
+  189      "pk": 18,
+  190:     "model": "jewelries.product",
+  191      "fields": {
+
+  200      "pk": 19,
+  201:     "model": "jewelries.product",
+  202      "fields": {
+
+  211      "pk": 20,
+  212:     "model": "jewelries.product",
+  213      "fields": {
+
+  222      "pk": 21,
+  223:     "model": "jewelries.product",
+  224      "fields": {
+
+  233      "pk": 22,
+  234:     "model": "jewelries.product",
+  235      "fields": {
+
+  244      "pk": 23,
+  245:     "model": "jewelries.product",
+  246      "fields": {
+
+  255      "pk": 24,
+  256:     "model": "jewelries.product",
+  257      "fields": {
+
+  266      "pk": 25,
+  267:     "model": "jewelries.product",
+  268      "fields": {
+
+  277      "pk": 26,
+  278:     "model": "jewelries.product",
+  279      "fields": {
+
+  288      "pk": 27,
+  289:     "model": "jewelries.product",
+  290      "fields": {
+
+jewelries/migrations/0001_initial.py:
+  23          migrations.CreateModel(
+  24:             name='Product',
+  25              fields=[
+
+jewelries/templates/jewelries/jewelries.html:
+  29                          {% if jewelry.image %}
+  30:                         <a href="{% url 'jewelry_detail' product.id %}">
+  31                              <img src="{{ jewelry.image.url }}" class="card-img-top img-fluid" alt="{{ jewelry.name }}">
+
+  33                          {% else %}
+  34:                         <a href="{% url 'jewelry_detail' product.id %}">
+  35                              <img src="{{ MEDIA_URL }}no-image.png" class="card-img-top img-fluid"
+
+kosmo_creations/settings.py:
+  18  
+  19: # Quick-start development settings - unsuitable for production
+  20  # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
+  21  
+  22: # SECURITY WARNING: keep the secret key used in production secret!
+  23  SECRET_KEY = 'django-insecure-7v()!5^_e!b6q*7#+3*un#455#bnqa4z1ypomwv*2%a4el#_ma'
+  24  
+  25: # SECURITY WARNING: don't run with debug turned on in production!
+  26  DEBUG = True
+
+templates/base.html:
+  93                              {% if request.user.is_superuser %}
+  94:                             <li><a href="" class="dropdown-item" type="button">Product Management</a></li>
+  95                              {% endif %}
+
+templates/includes/main-nav.html:
+   7              <a class="logo-font font-weight-bold nav-link text-black me-5" href="{% url 'jewelries' %}"
+   8:                 id="all-products-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   9                  All Jewelries
+  10              </a>
+  11:             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+  12                  <a href="" class="dropdown-item">By Price</a>
+
+templates/includes/mobile-top-header.html:
+  33          {% if request.user.is_superuser %}
+  34:         <a href="#" class="dropdown-item">Product Management</a>
+  35          {% endif %}

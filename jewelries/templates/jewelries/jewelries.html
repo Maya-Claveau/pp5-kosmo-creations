@@ -15,8 +15,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Jewelries</h2>
-            <hr class="w-50 mb-1">
+            <h2 class="logo-font text-black">Jewelries</h2>
+            <span>
+                <hr class="w-50 mb-1 text-black"></span> <!-- need to center this line -->
         </div>
     </div>
     <div class="row">
@@ -27,11 +28,11 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
                         {% if jewelry.image %}
-                        <a href="">
+                        <a href="{% url 'jewelry_detail' jewelry.id %}">
                             <img src="{{ jewelry.image.url }}" class="card-img-top img-fluid" alt="{{ jewelry.name }}">
                         </a>
                         {% else %}
-                        <a href="">
+                        <a href="{% url 'jewelry_detail' jewelry.id %}">
                             <img src="{{ MEDIA_URL }}no-image.png" class="card-img-top img-fluid"
                                 alt="{{ jewelry.name }}">
                         </a>

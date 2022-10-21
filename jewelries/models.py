@@ -17,8 +17,8 @@ class Category(models.Model):
         return self.friendly_name
 
 
-class Product(models.Model):
-    """ model for product """
+class Jewelry(models.Model):
+    """ model for jewelries """
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
