@@ -11,12 +11,27 @@ def all_jewelries(request):
     jewelries = Jewelry.objects.all()
     query = None
     categories = None
+    sort = None
+    direction = None
 
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             jewelries = jewelries.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                jewelries = jewelries.annotate(lower_name=lower('name'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            jewelries = jewelries.order_by(sortkey)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -27,10 +42,13 @@ def all_jewelries(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             jewelries = jewelries.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'jewelries': jewelries,
         'search_term': query,
         'current_categories': categories,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'jewelries/jewelries.html', context)
