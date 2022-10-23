@@ -16,12 +16,57 @@
     <div class="row">
         <div class="col-12 text-center mt-3 text-black d-flex flex-column align-items-center">
             <h2 class="logo-font">Jewelries</h2>
+            {% for r in requested_categories %}
+            <a href="{% url 'jewelries' %}?category={{ r.name }}" class="category-badge text-decoration-none">
+                <span class="p-2 mt-2 badge text-uppercase text-black bg-info rounded-1">{{ r.name }}</span>
+            </a>
+            {% endfor %}
             <hr class="w-50">
         </div>
     </div>
     <div class="row">
         <div class="jewelry-container col-10 offset-1">
-            <div class="row mt-1 mb-1"></div>
+            <div class="row mt-1 mb-1">
+                <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                    <div class="sort-select-wrapper w-50">
+                        <select id="sort-selector"
+                            class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if requested_sorting == 'None_None' %}selected{% endif %}>Sort
+                                by...
+                            </option>
+                            <option value="price_asc" {% if requested_sorting == 'price_asc' %}selected{% endif %}>Price
+                                (low to high)</option>
+                            <option value="price_desc" {% if requested_sorting == 'price_desc' %}selected{% endif %}>
+                                Price
+                                (high to low)</option>
+                            <option value="rating_asc" {% if requested_sorting == 'rating_asc' %}selected{% endif %}>
+                                Rating (low to high)</option>
+                            <option value="rating_desc" {% if requested_sorting == 'rating_desc' %}selected{% endif %}>
+                                Rating (high to low)</option>
+                            <option value="name_asc" {% if requested_sorting == 'name_asc' %}selected{% endif %}>Name
+                                (A-Z)</option>
+                            <option value="name_desc" {% if requested_sorting == 'name_desc' %}selected{% endif %}>Name
+                                (Z-A)</option>
+                            <option value="category_asc"
+                                {% if requested_sorting == 'category_asc' %}selected{% endif %}>
+                                Category (A-Z)</option>
+                            <option value="category_desc"
+                                {% if requested_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-first">
+                    <p class="text-muted mt-3 text-center text-md-left">
+                        {% if search_term or requested_categories or requested_sorting != 'None_None' %}
+                        <span class="small"><a class="text-info text-decoration-none" href="{% url 'jewelries' %}">View
+                                All</a> | </span>
+                        {% endif %}
+                        {{ jewelries|length }} Jewelries{% if search_term %} found for
+                        <strong>"{{ search_term }}"</strong>
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
             <div class="row">
                 {% for jewelry in jewelries %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -48,6 +93,15 @@
                                     <p class="lead mb-0 text-left text-black font-weight-bold">
                                         €{{ jewelry.price }}
                                     </p>
+                                    {% if jewelry.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a href="{% url 'jewelries' %}?category={{ jewelry.category.name }}"
+                                            class="text-muted text-decoration-none">
+                                            <i class="fa-solid fa-tags"></i>
+                                            {{ jewelry.category.name }}
+                                        </a>
+                                    </p>
+                                    {% endif %}
                                     {% if jewelry.rating %}
                                     <small class="text-muted"><i class="fas fa-star me-1"></i>
                                         {{ jewelry.rating }} / 5

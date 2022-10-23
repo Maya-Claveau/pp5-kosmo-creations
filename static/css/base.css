@@ -63,6 +63,11 @@ body {
     z-index: -1;
 }
 
+.category-badge>span.badge:hover {
+    background: black !important;
+    color: #0dcaf0 !important;
+}
+
 /* -------------------------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

@@ -26,6 +26,8 @@ def all_jewelries(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 jewelries = jewelries.annotate(lower_name=lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -42,13 +44,13 @@ def all_jewelries(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             jewelries = jewelries.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'
+    requested_sorting = f'{sort}_{direction}'
 
     context = {
         'jewelries': jewelries,
         'search_term': query,
-        'current_categories': categories,
-        'current_sorting': current_sorting,
+        'requested_categories': categories,
+        'requested_sorting': requested_sorting,
     }
 
     return render(request, 'jewelries/jewelries.html', context)
