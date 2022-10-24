@@ -13,6 +13,7 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid">
+    <!-- page header with category link below -->
     <div class="row">
         <div class="col-12 text-center mt-3 text-black d-flex flex-column align-items-center">
             <h2 class="logo-font">Jewelries</h2>
@@ -28,33 +29,43 @@
         <div class="jewelry-container col-10 offset-1">
             <div class="row mt-1 mb-1">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                    <!-- display the sorting functionality according to price, rating and names -->
                     <div class="sort-select-wrapper w-50">
                         <select id="sort-selector"
                             class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                            <option value="reset" {% if requested_sorting == 'None_None' %}selected{% endif %}>Sort
-                                by...
+                            <option value="reset" {% if requested_sorting == 'None_None' %}selected{% endif %}>
+                                Sort by...
                             </option>
-                            <option value="price_asc" {% if requested_sorting == 'price_asc' %}selected{% endif %}>Price
-                                (low to high)</option>
+                            <option value="price_asc" {% if requested_sorting == 'price_asc' %}selected{% endif %}>
+                                Price (low to high)
+                            </option>
                             <option value="price_desc" {% if requested_sorting == 'price_desc' %}selected{% endif %}>
-                                Price
-                                (high to low)</option>
+                                Price (high to low)
+                            </option>
                             <option value="rating_asc" {% if requested_sorting == 'rating_asc' %}selected{% endif %}>
-                                Rating (low to high)</option>
+                                Rating (low to high)
+                            </option>
                             <option value="rating_desc" {% if requested_sorting == 'rating_desc' %}selected{% endif %}>
-                                Rating (high to low)</option>
-                            <option value="name_asc" {% if requested_sorting == 'name_asc' %}selected{% endif %}>Name
-                                (A-Z)</option>
-                            <option value="name_desc" {% if requested_sorting == 'name_desc' %}selected{% endif %}>Name
-                                (Z-A)</option>
+                                Rating (high to low)
+                            </option>
+                            <option value="name_asc" {% if requested_sorting == 'name_asc' %}selected{% endif %}>
+                                Name (A-Z)
+                            </option>
+                            <option value="name_desc" {% if requested_sorting == 'name_desc' %}selected{% endif %}>
+                                Name (Z-A)
+                            </option>
                             <option value="category_asc"
                                 {% if requested_sorting == 'category_asc' %}selected{% endif %}>
-                                Category (A-Z)</option>
+                                Category (A-Z)
+                            </option>
                             <option value="category_desc"
-                                {% if requested_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                                {% if requested_sorting == 'category_desc' %}selected{% endif %}>
+                                Category (Z-A)
+                            </option>
                         </select>
                     </div>
                 </div>
+                <!-- display the search term entered by the user and number of results, with a view all button -->
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or requested_categories or requested_sorting != 'None_None' %}
@@ -67,6 +78,8 @@
                     </p>
                 </div>
             </div>
+
+            <!-- display the jewelries with image, name, price, category and rating -->
             <div class="row">
                 {% for jewelry in jewelries %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -142,4 +155,42 @@
         </div>
     </div>
 </div>
+<!-- Back to top button -->
+<div class="btt-button shadow-sm rounded-1 border bg-light text-black border-info">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+    </a>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
+
+<script type="text/javascript">
+    $('#sort-selector').change(function () {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
+
+        var selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
+
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
+
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
 {% endblock %}

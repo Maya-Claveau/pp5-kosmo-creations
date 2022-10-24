@@ -68,6 +68,22 @@ body {
     color: #0dcaf0 !important;
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 200px;
+    right: 15px;
+}
+
+.btt-button:hover {
+    background: #0dcaf0 !important;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 /* -------------------------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
