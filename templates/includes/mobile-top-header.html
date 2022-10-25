@@ -1,3 +1,4 @@
+<!-- search function with search form  -->
 <li class="list-inline-item">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-bs-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
@@ -21,6 +22,7 @@
         </form>
     </div>
 </li>
+<!-- display appropriate dropdown menu depends on user login status  -->
 <li class="list-inline-item dropdown">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-bs-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
@@ -28,6 +30,7 @@
             <div><i class="fas fa-user fa-lg"></i></div>
         </div>
     </a>
+    <!-- if user is not logged in, display register and login buttons, if logged in and if is superuser, then display product management btn, otherwise display my profile and logout btns -->
     <div class="dropdown-menu border-0" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
@@ -41,6 +44,7 @@
         {% endif %}
     </div>
 </li>
+<!-- display shopping bag icon, if there is items in it, grand total will be displayed as well  -->
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
         href="#">

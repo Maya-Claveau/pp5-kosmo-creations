@@ -1,3 +1,4 @@
+<!-- navbar on desktop view  -->
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown d-lg-none">
@@ -8,6 +9,7 @@
                 id="all-products-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Jewelries
             </a>
+            <!-- dropdown menu with different sorting filters  -->
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'jewelries' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'jewelries' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>

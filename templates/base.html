@@ -57,9 +57,10 @@
 </head>
 
 <body>
-    <!-- nav bar -->
+    <!-- header -->
     <header class="container-fluid fixed-top bg-white">
         <div id="topnav" class="row navbar navbar-expand-md navbar-light pt-lg-2 d-none d-lg-flex">
+            <!-- search form  -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'jewelries' %}">
                     <div class="input-group w-50">
@@ -75,12 +76,14 @@
                     </div>
                 </form>
             </div>
+            <!-- logo  -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
                 <a href="{% url 'home' %}" class="navbar-brand main-logo-link">
                     <h2 class="logo-font text-black mt-4"><strong>Kosmo</strong><span class="text-black"></span>
                         Creations</span></h2>
                 </a>
             </div>
+            <!-- account with dropdown menu  -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-end my-0">
                     <li class="list-inline-item dropdown">
@@ -91,6 +94,7 @@
                                 <p class="my-0">Account</p>
                             </div>
                         </a>
+                        <!-- if user is not logged in, display register and login buttons, if logged in and if is superuser, then display product management btn, otherwise display my profile and logout btns -->
                         <ul class="dropdown-menu border-0">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
@@ -104,6 +108,7 @@
                             {% endif %}
                         </ul>
                     </li>
+                    <!-- display shopping bag icon, if there is items in it, grand total will be displayed as well  -->
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="">
