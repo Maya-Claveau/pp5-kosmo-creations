@@ -47,7 +47,7 @@
 <!-- display shopping bag icon, if there is items in it, grand total will be displayed as well  -->
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
-        href="#">
+        href="{% url 'view_shopping_cart' %}">
         <div class="text-center">
             <div class="me-2"><i class="fas fa-shopping-bag fa-lg"></i>
                 {% if grand_total %}
