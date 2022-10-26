@@ -5,7 +5,7 @@ from django.conf import settings
 def shopping_cart_contents(request):
     """ a context processor"""
     """ to make this dictionary availabe to the entire application """
-    """ to calculate the delivery cost according to the total in shopping_cart """
+    """ calculate the delivery cost according to the total in shopping_cart """
 
     shopping_cart_items = []
     total = 0
