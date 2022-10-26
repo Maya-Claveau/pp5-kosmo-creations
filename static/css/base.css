@@ -73,7 +73,7 @@ body {
     height: 42px;
     width: 42px;
     position: fixed;
-    bottom: 200px;
+    bottom: 50px;
     right: 15px;
 }
 
@@ -106,6 +106,10 @@ body {
 
     .header-container {
         padding-top: 200px;
+    }
+
+    .btt-button {
+        bottom: 200px;
     }
 }
 
