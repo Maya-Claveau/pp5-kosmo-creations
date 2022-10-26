@@ -11,5 +11,29 @@
 {% endblock %}
 
 {% block content %}
+<div class="overlay"></div>
+<div class="container mb-2 text-black">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">Shopping Cart</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {% if shopping_cart_items %}
+            <div class="table-responsive rounded-1">
 
+            </div>
+            {% else %}
+            <p class="lead mb-5">Your shopping cart is empty.</p>
+            <a href="{% url 'jewelries' %}" class="btn btn-outline-info rounded-1 btn-lg">
+                <span class="icon"><i class="fa-solid fa-chevron-left"></i></span>
+                <span class="text-uppercase">Continue Shopping</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
 {% endblock %}
