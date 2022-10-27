@@ -79,7 +79,9 @@ body {
     background: #0dcaf0 !important;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.delete-link {
     cursor: pointer;
 }
 

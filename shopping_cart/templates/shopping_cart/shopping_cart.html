@@ -50,7 +50,27 @@
                             <p class="my-0">€{{ item.jewelry.price }}</p>
                         </td>
                         <td class="py-3 w-25">
-                            <p class="my-0">{{ item.quantity }}</p>
+                            <form method="POST" class="form update-form" action="">
+                                {% csrf_token %}
+                                <div class="input-group input-group-{{ item.item_id }}">
+                                    <button
+                                        class="decrement-btn input-group-text btn btn-outline-info btn-sm rounded-1 decrement-btn_{{ item.item_id }}"
+                                        data-item_id="{{ item.item_id }}" type="button">
+                                        <span><i class="fa-solid fa-minus fa-sm"></i></span>
+                                    </button>
+                                    <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}"
+                                        type="number" name="quantity" value="{{ item.quantity }}" min="1" max="50"
+                                        data-item_id="{{ item.item_id }}">
+                                    <button
+                                        class="increment-btn input-group-text btn btn-outline-info btn-sm rounded-1 increment-btn_{{ item.item_id }}"
+                                        data-item_id="{{ item.item_id }}" type="button">
+                                        <span><i class="fa-solid fa-plus fa-sm"></i></span>
+                                    </button>
+                                </div>
+                            </form>
+                            <a class="update-link text-info mt-3 text-decoration-none" href=""><small>Update</small></a>
+                            <a class="delete-link text-danger mt-3 text-decoration-none float-end"
+                                id="delete_{{ item.item_id }}" href=""><small>Delete</small></a>
                         </td>
                         <td class="py-3">
                             <p class="my-0">€{{ item.jewelry.price }}</p>
@@ -97,4 +117,33 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'jewelries/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.delete-link').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('delete_')[1];
+        var url = `/shopping_cart/delete/${itemId}`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken
+        };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+</script>
+
 {% endblock %}

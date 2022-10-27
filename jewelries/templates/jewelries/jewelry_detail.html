@@ -59,14 +59,14 @@
                             <div class="input-group w-50 input-group-{{ jewelry.id }}">
                                 <button
                                     class="decrement-btn input-group-text btn btn-outline-info rounded-1 decrement-btn_{{ jewelry.id }}"
-                                    data-item_id="{{ jewelry.id }}" type="button" onclick="increase()">
+                                    data-item_id="{{ jewelry.id }}" type="button">
                                     <span class="icon"><i class="fa-solid fa-minus"></i></span>
                                 </button>
                                 <input class="form-control qty_input id_qty_{{ jewelry.id }}" type="number"
-                                    name="quantity" value="1" min="1" max="99" data-item_id="{{ jewelry.id }}">
+                                    name="quantity" value="1" min="1" max="50" data-item_id="{{ jewelry.id }}">
                                 <button
                                     class="increment-btn input-group-text btn btn-outline-info rounded-1 increment-btn_{{ jewelry.id }}"
-                                    data-item_id="{{ jewelry.id }}" type="button" onclick="decrease()">
+                                    data-item_id="{{ jewelry.id }}" type="button">
                                     <span class="icon"><i class="fa-solid fa-plus"></i></span>
                                 </button>
                             </div>
