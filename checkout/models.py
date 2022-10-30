@@ -23,7 +23,9 @@ class Order(models.Model):
     post_code = models.CharField(max_length=20)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    total_paid = models.DecimalField(max_digits=5, decimal_places=2)
+    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)  # noqa
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)  # noqa
+    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)  # noqa
 
     def __str__(self):
         return self.order_number
