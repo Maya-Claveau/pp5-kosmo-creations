@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib import messages
+
+from jewelries.models import Jewelry
 
 
 # Create your views here.
@@ -11,6 +14,7 @@ def view_shopping_cart(request):
 def add_to_cart(request, item_id):
     """ add quantity of the specified product in the shopping cart """
 
+    jewelry = Jewelry.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     shopping_cart = request.session.get('shopping_cart', {})
@@ -19,6 +23,7 @@ def add_to_cart(request, item_id):
         shopping_cart[item_id] += quantity
     else:
         shopping_cart[item_id] = quantity
+        messages.success(request, f'Added {jewelry.name} to your shopping cart')
 
     request.session['shopping_cart'] = shopping_cart
     return redirect(redirect_url)
