@@ -7,7 +7,7 @@ from .models import Jewelry, Category
 
 # Create your views here.
 def all_jewelries(request):
-    """ to render all jewelries, as well as sorting and searching functions  """
+    """ to render all jewelries, as well as sorting and searching functions """
 
     jewelries = Jewelry.objects.all()
     query = None
@@ -39,10 +39,12 @@ def all_jewelries(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criterial!")
-                return redirect(reverse('products'))
+                messages.error(
+                    request, "You didn't enter any search criterial!"
+                    )
+                return redirect(reverse('jewelries'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(description__icontains=query)  # noqa
             jewelries = jewelries.filter(queries)
 
     requested_sorting = f'{sort}_{direction}'
