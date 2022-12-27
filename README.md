@@ -1,12 +1,10 @@
-# Welcome to **[Kosmo Creations]()**
+# Welcome to **[Kosmo Creations](add link here)**
 
 <img src="" width="800">
 
-The 5th portfolio project for Code Institute is here. It is a E-commerce web application, click [Here]() to have a look.
+The 5th portfolio project for Code Institute is here. It is a E-commerce web application, click [Here](add link here) to have a look.
 
 ## **Purpose of the site**
-
-<p></p>
 
 Site owner’s main objectives are:
 
@@ -34,7 +32,7 @@ Site user’s main objectives are:
 
 The reason that I decided to create a jewelry store for my 5th and last project at CI, is that the designer of those beautiful jewelries – Eudokia Michaelidou holds very special place in my heart. She is the most generous, kind, beautiful human being inside out. When I first arrived in Cyprus, as a foreign student, with limited knowledge of how things work outside of the college, and no knowledge of Greek, I was clueless and lost. Until I was lucky enough to have met Eudokia. We connected instantly, she said I was her lost child from China. She treated me as her own child... **PAUSE** ... here I should give a bit more info about her situation at that time. She isn’t rich and have big fat pile of cash laying around so she can just randomly take someone under her wing with no impact on her own life. At that time, she was a single mother with 4 children, no job and living on the government support. Struggling is an understatement to describe her situation, but still she took me in ... **RESUME** ... shared everything she had with no hesitance. Even treat me better than her own children sometimes. There are no words can describe how grateful I feel towards her, and she is the reason I feel very strong connection with Cyprus and see it as my second home country.
 
-Fast forward today, she started this small business of making jewelries about a year ago, and I really wanted to utilize my newly gained skill to help her to have a digital presence. If Covid has taught me anything, it would be that digital business is the further, without it, you are failing before even start. So here we are, [Kosmo Creations]() with love from Cyprus!
+Fast forward today, she started this small business of making jewelries about a year ago, and I really wanted to utilize my newly gained skill to help her to have a digital presence. If Covid has taught me anything, it would be that digital business is the further, without it, you are failing before even start. So here we are, [Kosmo Creations](add link here) with love from Cyprus!
 
 ---
 
@@ -44,7 +42,7 @@ Fast forward today, she started this small business of making jewelries about a 
 
 ### **User Stories**
 
-The tasks users can perform depends on their role. On this site, there are admin, first time user and returned users, tasks that they have the authorization to perform are shown in below table, as well as their associated User Stories from [Github]().
+The tasks users can perform depends on their role. On this site, there are admin, first time user and returned users, tasks that they have the authorization to perform are shown in below table, as well as their associated User Stories from [Github](add link here).
 
 <img src="" width="800">
 
@@ -116,6 +114,8 @@ pip3 install
 
 Note: maybe add how to fork this repo
 
+---
+
 ## **Finished Site**
 
 talk about landing page and ui
@@ -148,11 +148,13 @@ Mobile
 
 ## **Testing**
 
-### **Code Validation**
+Details regarding Testing include Code Validation can be found in a separate file [here](link to the TESTing.md)
+
+---
 
 ## **Tech Stack**
 
-### **Language**
+### **Languages**
 
 This project is a Full-Stack e-Commerce web application. With the authentication it provide role-based access to the data.
 
@@ -174,6 +176,8 @@ Main Tech used are:
 
 - [Heroku](https://heroku.com/) for deployment
 
+- [ElephantSQL](https://www.elephantsql.com/) for hosting database
+
 - [draw.io](https://www.draw.io) for creating database relationship
 
 - [AWS](https://AWS.com) for store the images and css files used in this project
@@ -192,7 +196,14 @@ Main Tech used are:
 
 ### **Difficulties I manage to overcome**
 
-Below are example of list of things I struggled with
+## Below are example of list of things I struggled with:
+
+-
+-
+-
+-
+-
+-
 
 ## **Credits**
 
