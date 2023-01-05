@@ -180,7 +180,7 @@ Mobile
 
 ## **Testing**
 
-Details regarding Testing include Code Validation can be found in a separate file [here](link to the TESTing.md)
+Details regarding Testing include Code Validation can be found in a separate file [TESTING.md](TESTING.md)
 
 ---
 
