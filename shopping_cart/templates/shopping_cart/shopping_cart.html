@@ -20,6 +20,7 @@
             <hr class="w-50">
         </div>
     </div>
+
     <div class="row">
         <div class="col d-flex flex-column align-items-center">
             {% if shopping_cart_items %}
@@ -69,9 +70,11 @@
                                     </button>
                                 </div>
                             </form>
-                            <a class="update-link text-info mt-3 text-decoration-none"><small>Update</small></a>
-                            <a class="delete-link text-danger mt-3 text-decoration-none float-end"
-                                id="delete_{{ item.item_id }}"><small>Delete</small></a>
+                            <div class="d-flex justify-content-between">
+                                <a class="update-link text-info mt-3 text-decoration-none"><small>Update</small></a>
+                                <a class="delete-link text-danger mt-3 text-decoration-none float-end"
+                                    id="delete_{{ item.item_id }}"><small>Delete</small></a>
+                            </div>
                         </td>
                         <td class="py-3">
                             <p class="my-0">€{{ item.jewelry.price | calculate_subtotal:item.quantity }}</p>
@@ -82,7 +85,7 @@
                         <td colspan="5" class="pt-5 text-right">
                             <h6><strong>Shopping Cart Total: ${{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                            <h4 class="mt-4 fw-bold">Grand Total: ${{ grand_total|floatformat:2 }}</h4>
                             {% if free_delivery_delta > 0 %}
                             <p class="mb-1 text-danger">
                                 Spend <strong>€{{ free_delivery_delta }}</strong> more to get free delivery!
@@ -92,25 +95,39 @@
                     </tr>
                     <tr>
                         <td colspan="5" class="text-right">
-                            <a href="{% url 'jewelries' %}" class="btn btn-outline-info rounded-1 btn-lg">
+                            <a href="{% url 'jewelries' %}" class="btn btn-outline-info rounded-1 btn-sm">
                                 <span class="icon">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Continue Shopping</span>
                             </a>
+                            {% if user.is_authenticated %}
                             <a href="{% url 'checkout' %}" class="btn btn-info rounded-1 btn-lg">
                                 <span class="text-uppercase">Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fa-solid fa-lock"></i>
                                 </span>
                             </a>
+                            {% else %}
+                            <hr>
+                            <div class="col d-flex flex-column align-items-center mt-4">
+                                <h3 class="fw-bold mb-1">Do not have an account yet?</h3>
+                                <p>
+                                    <a href="{% url 'account_signup' %}"
+                                        class="link-info text-decoration-none fw-bold">Create</a> an account or
+                                    <a href="{% url 'account_login' %}"
+                                        class="link-info text-decoration-none fw-bold">Login</a> to proceed to
+                                    checkout
+                                </p>
+                            </div>
+                            {% endif %}
                         </td>
                     </tr>
                 </table>
             </div>
             {% else %}
             <p class="lead mb-5">Your shopping cart is empty.</p>
-            <a href="{% url 'jewelries' %}" class="btn btn-outline-info rounded-1 btn-lg">
+            <a href="{% url 'jewelries' %}" class="btn btn-outline-info rounded-1 btn-sm">
                 <span class="icon"><i class="fa-solid fa-chevron-left"></i></span>
                 <span class="text-uppercase">Continue Shopping</span>
             </a>
