@@ -15,10 +15,6 @@ def checkout(request):
     """ to handle the checkout process using stripe """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-    shopping_cart_items = []
-    total = 0
-    product_count = 0
-    quantity = 1
 
     if request.method == 'POST':
         shopping_cart = request.session.get('shopping_cart', {})
@@ -39,24 +35,22 @@ def checkout(request):
             order = order_form.save()
             for item_id, item_data in shopping_cart.items():
                 try:
-                    jewelry = get_object_or_404(Jewelry, pk=item_id)
-                    total += quantity * jewelry.price
-                    product_count += quantity
-                    shopping_cart_items.append({
-                        'item_id': item_id,
-                        'quantity': quantity,
-                        'jewelry': jewelry,
-                    })
-                    shopping_cart.items().save()
+                    jewelry = Jewelry.objects.get(id=item_id)
+                    order_item = OrderItem(
+                        order=order,
+                        jewelry=jewelry,
+                        quantity=item_data,
+                    )
+                    order_item.save()
                 except jewelry.DoesNotExist:
                     messages.error(request, (
-                        "One of the Jewelry in your shopping cart wasn't found."
+                        "One of the Jewelry in your shopping cart wasn't found."  # noqa
                         " Please let us know and we will assist you!"
                     ))
                     order.delete()
                     return redirect(reverse('view_shopping_cart'))
                 request.session['save_info'] = 'save_info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success', args=[order.order_number]))  # noqa
         else:
             messages.error(request, 'Error detected in your form. \
                 Please make sure the information entered are correct.')
@@ -64,7 +58,7 @@ def checkout(request):
         shopping_cart = request.session.get('shopping_cart', {})
         if not shopping_cart:
             messages.error(
-                request, "There is nothing in your shopping cart at the moment."
+                request, "There is nothing in your shopping cart at the moment."  # noqa
                 )
             return redirect(reverse('jewelries'))
 

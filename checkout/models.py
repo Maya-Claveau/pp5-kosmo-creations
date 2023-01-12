@@ -44,12 +44,10 @@ class Order(models.Model):
 
     def update_total(self):
         """
-        Update grand total each time an item is added,
-        accounting for delivery costs.
+        Update grand total when an new item is added,
+        calculate delivery costs.
         """
-        self.order_total = self.orderitems.aggregate(Sum(
-            'orderitem_total'
-            ))['orderitem_total__sum'] or 0
+        self.order_total = self.orderinlineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0  # noqa
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100  # noqa
         else:
@@ -60,22 +58,10 @@ class Order(models.Model):
 
 class OrderItem(models.Model):
     """ model for each order with items in shopping cart """
-    order = models.ForeignKey(
-        Order,
-        null=False,
-        blank=False,
-        on_delete=models.CASCADE,
-        related_name='orderitem'
-    )
-
-    jewelry = models.ForeignKey(
-        Jewelry,
-        null=False,
-        blank=False,
-        on_delete=models.CASCADE,
-    )
-
+    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='orderinlineitems')  # noqa
+    jewelry = models.ForeignKey(Jewelry, null=False, blank=False, on_delete=models.CASCADE)  # noqa
     quantity = models.PositiveIntegerField(default=1)
+    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)  # noqa
 
     def __str__(self):
         return f'Order ID: {self.id} on order {self.order.order_number}'
@@ -85,5 +71,5 @@ class OrderItem(models.Model):
         Override the original save method to set orderitem total
         and update the order total
         """
-        self.orderitem_total = self.jewelry.price * self.quantity
+        self.lineitem_total = self.jewelry.price * self.quantity
         super().save(*args, **kwargs)
