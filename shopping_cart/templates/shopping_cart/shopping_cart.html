@@ -107,23 +107,27 @@
                 when user is not logged in, checkout button will be hidden, instead provide links to
                 sign up or log in.
             -->
-            <div class="mt-1">
-                <a href="{% url 'jewelries' %}" class="btn btn-outline-info rounded-1 btn-md">
-                    <span class="icon">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </span>
-                    <span class="text-uppercase">Continue Shopping</span>
-                </a>
+            <div class="mt-1 d-md-flex">
+                <div class="mb-3 me-md-2">
+                    <a href="{% url 'jewelries' %}" class="btn btn-outline-info rounded-1 btn-md w-100">
+                        <span class="icon">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Continue Shopping</span>
+                    </a>
+                </div>
                 {% if user.is_authenticated %}
-                <a href="{% url 'checkout' %}" class="btn btn-info rounded-1 btn-lg">
-                    <span class="text-uppercase">Secure Checkout</span>
-                    <span class="icon">
-                        <i class="fa-solid fa-lock"></i>
-                    </span>
-                </a>
+                <div class="ms-md-1">
+                    <a href="{% url 'checkout' %}" class="btn btn-info rounded-1 btn-md w-100">
+                        <span class="text-uppercase">Secure Checkout</span>
+                        <span class="icon">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                    </a>
+                </div>
                 {% else %}
                 <hr>
-                <div class="col d-flex flex-column align-items-center mt-4">
+                <div class="col d-flex flex-column align-items-center ms-md-4">
                     <h3 class="fw-bold mb-1">Do not have an account yet?</h3>
                     <p>
                         <a href="{% url 'account_signup' %}" class="link-info text-decoration-none fw-bold">Create</a>
