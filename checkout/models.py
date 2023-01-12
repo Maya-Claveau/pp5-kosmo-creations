@@ -60,7 +60,7 @@ class OrderItem(models.Model):
     """ model for each order with items in shopping cart """
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='orderinlineitems')  # noqa
     jewelry = models.ForeignKey(Jewelry, null=False, blank=False, on_delete=models.CASCADE)  # noqa
-    quantity = models.PositiveIntegerField(default=1)
+    quantity = models.PositiveIntegerField(default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)  # noqa
 
     def __str__(self):
