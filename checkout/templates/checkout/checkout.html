@@ -110,24 +110,24 @@
                     <div class="mb-3 text-danger" role="alert" id="card-erros"></div>
                 </fieldset>
 
-                <div class="mt-5 mb-2">
-                    <a href="{% url 'view_shopping_cart' %}" class="btn btn-outline-info rounded-1 mb-2">
+                <div class="mt-5 mb-1 d-flex justify-content-around">
+                    <a href="{% url 'view_shopping_cart' %}" class="btn btn-outline-info rounded-1">
                         <span class="icon">
                             <i class="fa-solid fa-chevron-left"></i>
                         </span>
                         <span class="font-weight-bold">Adjust order</span>
                     </a>
-                    <button class="btn btn-info rounded-1 mb-2" id="submit-button">
+                    <button class="btn btn-info rounded-1" id="submit-button">
                         <span class="font-weight-bold">Complete Order</span>
                         <span class="icon"><i class="fa-solid fa-lock"></i></span>
                     </button>
-                    <p class="small text-danger my-0">
-                        <span class="icon">
-                            <i class="fa-solid fa-circle-exclamation"></i>
-                        </span>
-                        <span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
-                    </p>
                 </div>
+                <p class="small text-danger my-0 float-end me-5">
+                    <span class="icon">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </span>
+                    <span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
+                </p>
             </form>
         </div>
     </div>
