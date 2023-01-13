@@ -56,7 +56,7 @@
                         <small class="text-muted">In Stock</small>
                         <div class="col-12">
                             <label class="mt-3"><strong>Quantity:</strong></label>
-                            <div class="input-group w-50 input-group-{{ jewelry.id }}">
+                            <div class="input-group mb-4 w-50 input-group-{{ jewelry.id }}">
                                 <button
                                     class="decrement-btn input-group-text btn btn-outline-info rounded-1 decrement-btn_{{ jewelry.id }}"
                                     data-item_id="{{ jewelry.id }}" type="button">
@@ -71,29 +71,31 @@
                                 </button>
                             </div>
 
-                            <div class="col-12">
-                                <a href="{% url 'jewelries' %}" class="btn btn-outline-info btn-buy-now rounded-1 mt-5">
+                            <div
+                                class="col-12 d-flex flex-column-reverse justify-content-between flex-md-row justify-content-md-start ">
+                                <a href="{% url 'jewelries' %}"
+                                    class="btn btn-outline-info btn-buy-now rounded-1 mt-3 mt-md-5 me-md-3">
                                     <span class="icon">
                                         <i class="fa-solid fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Continue Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-info rounded-1 btn-buy-now text-uppercase mt-5"
+                                <input type="submit"
+                                    class="btn btn-info rounded-1 btn-buy-now text-uppercase mt-sm-3 mt-md-5"
                                     value="Add to cart">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% else %}
                             <div class="col-12 text-black">
                                 <p class="text-muted">Sold Out</p>
-                                <div class="col-12">
-                                    <a href="{% url 'jewelries' %}"
-                                        class="btn btn-outline-info btn-buy-now rounded-1 mt-5">
+                                <div class="col-12 mt-3">
+                                    <a href="{% url 'jewelries' %}" class="btn btn-outline-info btn-buy-now rounded-1">
                                         <span class="icon">
                                             <i class="fa-solid fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Continue Shopping</span>
                                     </a>
-                                    <input type="submit" class="btn btn-info rounded-1 btn-buy-now text-uppercase mt-5"
+                                    <input type="submit" class="btn btn-info rounded-1 btn-buy-now text-uppercase"
                                         value="Add to cart">
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
