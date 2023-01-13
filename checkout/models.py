@@ -26,6 +26,8 @@ class Order(models.Model):
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)  # noqa
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)  # noqa
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)  # noqa
+    original_shopping_cart = models.TextField(null=False, blank=False, default='')  # noqa
+    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')  # noqa
 
     def __str__(self):
         return self.order_number
