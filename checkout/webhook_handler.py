@@ -1,4 +1,6 @@
 from django.http import HttpResponse
+from django.conf import settings
+
 from .models import Order, OrderItem
 from jewelries.models import Jewelry
 
@@ -43,9 +45,9 @@ class StripeWH_Handler:
                 order = Order.objects.get(
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
-                    phone___iexact=shipping_details.phone,
+                    phone__iexact=shipping_details.phone,
                     country__iexact=shipping_details.address.country,
-                    postcode__iexact=shipping_details.address.postal_code,
+                    post_code__iexact=shipping_details.address.postal_code,
                     city__iexact=shipping_details.address.city,
                     address1__iexact=shipping_details.address.line1,
                     address2__iexact=shipping_details.address.line2,
@@ -60,7 +62,6 @@ class StripeWH_Handler:
                 attempt += 1
                 time.sleep(1)
         if order_exists:
-            self._send_confirmation_email(order)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',  # noqa
                 status=200)
@@ -72,7 +73,7 @@ class StripeWH_Handler:
                     email=billing_details.email,
                     phone=shipping_details.phone,
                     country=shipping_details.address.country,
-                    postcode=shipping_details.address.postal_code,
+                    post_code=shipping_details.address.postal_code,
                     city=shipping_details.address.city,
                     address1=shipping_details.address.line1,
                     address2=shipping_details.address.line2,

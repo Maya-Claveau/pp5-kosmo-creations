@@ -80,6 +80,7 @@ form.addEventListener('submit', function (ev) {
                         line1: $.trim(form.address1.value),
                         line2: $.trim(form.address2.value),
                         city: $.trim(form.city.value),
+                        state: $.trim(form.county_province_state.value),
                         country: $.trim(form.country.value),
                     }
                 }
@@ -91,6 +92,7 @@ form.addEventListener('submit', function (ev) {
                     line1: $.trim(form.address1.value),
                     line2: $.trim(form.address2.value),
                     city: $.trim(form.city.value),
+                    state: $.trim(form.county_province_state.value),
                     country: $.trim(form.country.value),
                     postal_code: $.trim(form.post_code.value),
                 }
