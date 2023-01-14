@@ -102,7 +102,11 @@
                         <ul class="dropdown-menu border-0">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <li><a href="" class="dropdown-item" type="button">Product Management</a></li>
+                            <li>
+                                <a href="{% url 'add_jewelry' %}" class="dropdown-item" type="button">
+                                    Product Management
+                                </a>
+                            </li>
                             {% endif %}
                             <li><a href="{% url 'profile' %}" class="dropdown-item" type="button">My Profile</a></li>
                             <li><a href="{% url 'account_logout' %}" class="dropdown-item" type="button">Logout</a></li>

@@ -79,18 +79,17 @@ def add_jewelry(request):
     #     messages.error(request, 'Sorry, only store owners can do that.')
     #     return redirect(reverse('home'))
 
-    # if request.method == 'POST':
-    #     form = JewelryForm(request.POST, request.FILES)
-    #     if form.is_valid():
-    #         jewelry = form.save()
-    #         messages.success(request, 'Jewelry Added Successfully!')
-    #         return redirect(reverse('jewelry_detail', args=[jewelry.id]))
-    #     else:
-    #         messages.error(request, 'Failed to add product. Please try again.')
-    # else:
-    #     form = JewelryForm()
+    if request.method == 'POST':
+        form = JewelryForm(request.POST, request.FILES)
+        if form.is_valid():
+            jewelry = form.save()
+            messages.success(request, 'Jewelry Added Successfully!')
+            return redirect(reverse('jewelry_detail', args=[jewelry.id]))
+        else:
+            messages.error(request, 'Failed to add product. Please try again.')
+    else:
+        form = JewelryForm()
 
-    form = JewelryForm()
     template = 'jewelries/add_jewelry.html'
     context = {
         'form': form,
