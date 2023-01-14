@@ -6,14 +6,14 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from jewelries.models import Jewelry
+from profiles.models import UserProfile
 
 
 # Create your models here.
 class Order(models.Model):
     """ model for order """
-    order_number = models.CharField(
-        max_length=32, null=False, editable=False
-    )
+    order_number = models.CharField(max_length=32, null=False, editable=False)  # noqa
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')  # noqa
     full_name = models.CharField(max_length=60)
     email = models.CharField(max_length=100)
     phone = models.CharField(max_length=25, blank=False, null=False)
