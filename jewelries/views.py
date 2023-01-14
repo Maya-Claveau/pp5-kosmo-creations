@@ -2,7 +2,9 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from .models import Jewelry, Category
+from .forms import JewelryForm
 
 
 # Create your views here.
@@ -69,3 +71,29 @@ def jewelry_detail(request, jewelry_id):
     }
 
     return render(request, 'jewelries/jewelry_detail.html', context)
+
+
+def add_jewelry(request):
+    """ add a jewelry to the e-shop """
+    # if not request.user.is_superuser:
+    #     messages.error(request, 'Sorry, only store owners can do that.')
+    #     return redirect(reverse('home'))
+
+    # if request.method == 'POST':
+    #     form = JewelryForm(request.POST, request.FILES)
+    #     if form.is_valid():
+    #         jewelry = form.save()
+    #         messages.success(request, 'Jewelry Added Successfully!')
+    #         return redirect(reverse('jewelry_detail', args=[jewelry.id]))
+    #     else:
+    #         messages.error(request, 'Failed to add product. Please try again.')
+    # else:
+    #     form = JewelryForm()
+
+    form = JewelryForm()
+    template = 'jewelries/add_jewelry.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

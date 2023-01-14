@@ -1,5 +1,4 @@
 from django import forms
-from .widgets import CustomClearableFileInput
 
 from .models import Jewelry, Category
 
@@ -10,7 +9,7 @@ class JewelryForm(forms.ModelForm):
         model = Jewelry
         fields = '__all__'
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)  # noqa
+    # image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)  # noqa
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
