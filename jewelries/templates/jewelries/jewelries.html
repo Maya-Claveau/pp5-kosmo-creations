@@ -98,7 +98,7 @@
                             <p class="card-title text-black">{{ jewelry.name }}</p>
                             {% if request.user.is_superuser %}
                             <div class="d-flex justify-content-end">
-                                <a href="#" class="btn btn-success me-1">Edit</a>
+                                <a href="{% url 'edit_jewelry' jewelry.id %}" class="btn btn-success me-1">Edit</a>
                                 <a href="#" class="btn btn-danger">Delete</a>
                             </div>
                             {% endif %}

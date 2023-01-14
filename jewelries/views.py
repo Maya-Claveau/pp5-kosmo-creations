@@ -83,16 +83,45 @@ def add_jewelry(request):
         form = JewelryForm(request.POST, request.FILES)
         if form.is_valid():
             jewelry = form.save()
-            messages.success(request, 'Jewelry Added Successfully!')
+            messages.success(request, 'Jewelry added successfully!')
             return redirect(reverse('jewelry_detail', args=[jewelry.id]))
         else:
-            messages.error(request, 'Failed to add product. Please try again.')
+            messages.error(request, 'Failed to add the jewelry. Please try again.')  # noqa
     else:
         form = JewelryForm()
 
     template = 'jewelries/add_jewelry.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_jewelry(request, jewelry_id):
+    """ Edit jewelry in the store """
+    # if not request.user.is_superuser:
+    #     messages.error(request, 'Sorry, only store owners can do that.')
+    #     return redirect(reverse('home'))
+
+    jewelry = get_object_or_404(Jewelry, pk=jewelry_id)
+    if request.method == 'POST':
+        form = JewelryForm(request.POST, request.FILES, instance=jewelry)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Jewelry updated successfully!')
+            return redirect(reverse('jewelry_detail', args=[jewelry.id]))
+
+        else:
+            messages.error(request, 'Failed to update the jewelry. Please try again.')  # noqa
+    else:
+        form = JewelryForm(instance=jewelry)
+        messages.info(request, f'You are editing {jewelry.name}')
+
+    template = 'jewelries/edit_jewelry.html'
+    context = {
+        'form': form,
+        'jewelry': jewelry,
     }
 
     return render(request, template, context)
