@@ -3,6 +3,8 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 
+from django_countries.fields import CountryField
+
 from jewelries.models import Jewelry
 
 
@@ -19,7 +21,7 @@ class Order(models.Model):
     address2 = models.CharField(max_length=150, blank=True)
     city = models.CharField(max_length=80)
     county_province_state = models.CharField(max_length=90)
-    country = models.CharField(max_length=90)
+    country = CountryField(blank_label='Country *')
     post_code = models.CharField(max_length=20)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
