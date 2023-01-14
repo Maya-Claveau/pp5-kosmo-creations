@@ -1,0 +1,22 @@
+Hello {{ order.full_name }}!
+
+This is a confirmation of your order at Kosmo Creation. Your order information is below:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.created_on }}
+
+Order Total: ${{ order.order_total }}
+Delivery: ${{ order.delivery_cost }}
+Grand Total: ${{ order.grand_total }}
+
+Your order will be shipped to {{ order.address1 }} in {{ order.city }}, {{ order.country }}.
+
+We will contact you on phone number {{ order.phone }} if necessary.
+
+Meanwhile, if you have any questions, please feel free to contact us at {{ contact_email }}.
+
+Thank you for your order!
+
+Sincerely,
+
+Kosmo Creation
