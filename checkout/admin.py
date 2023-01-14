@@ -28,7 +28,7 @@ class OrderAdmin(admin.ModelAdmin):
         )
 
     fields = (
-        'order_number', 'created_on', 'full_name',
+        'order_number', 'user_profile', 'created_on', 'full_name',
         'email', 'phone', 'address1',
         'address2', 'city', 'county_province_state',
         'post_code', 'country', 'order_total', 'delivery_cost', 'grand_total',
