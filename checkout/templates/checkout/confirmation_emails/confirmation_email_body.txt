@@ -5,9 +5,9 @@ This is a confirmation of your order at Kosmo Creation. Your order information i
 Order Number: {{ order.order_number }}
 Order Date: {{ order.created_on }}
 
-Order Total: ${{ order.order_total }}
-Delivery: ${{ order.delivery_cost }}
-Grand Total: ${{ order.grand_total }}
+Order Total: €{{ order.order_total }}
+Delivery: €{{ order.delivery_cost }}
+Grand Total: €{{ order.grand_total }}
 
 Your order will be shipped to {{ order.address1 }} in {{ order.city }}, {{ order.country }}.
 
