@@ -1,0 +1,1 @@
+web: gunicorn kosmo_creations.wsgi:application
