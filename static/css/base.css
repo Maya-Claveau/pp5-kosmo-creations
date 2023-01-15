@@ -111,15 +111,6 @@ form>div {
     margin-bottom: 10px;
 }
 
-/* -------------------------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
-}
-
 /* Allauth form formatting */
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
@@ -192,6 +183,15 @@ form>div {
     cursor: pointer;
 }
 
+/* -------------------------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -219,5 +219,9 @@ form>div {
 
     body {
         height: calc(100vh - 120px);
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
     }
 }
