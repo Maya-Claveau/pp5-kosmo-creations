@@ -52,10 +52,7 @@ def modify_cart(request, item_id):
             )
     else:
         shopping_cart.pop(item_id)
-        messages.success(
-            request,
-            f'Deleted {jewelry.name} from your shopping cart'
-            )
+        messages.success(request, f'Removed {jewelry.name} from you shopping cart')  # noqa
 
     request.session['shopping_cart'] = shopping_cart
     return redirect(reverse('view_shopping_cart'))
