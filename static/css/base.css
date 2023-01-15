@@ -111,6 +111,11 @@ form>div {
     margin-bottom: 10px;
 }
 
+/* payment-form on checkout page */
+#payment-form div {
+    margin-bottom: 10px;
+}
+
 /* Allauth form formatting */
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
@@ -203,7 +208,7 @@ form>div {
     }
 
     .header-container {
-        padding-top: 200px;
+        padding-top: 220px;
     }
 
     .btt-button {
@@ -214,7 +219,7 @@ form>div {
 /* add padding top to images for mobile view */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 120px;
+        padding-top: 100px;
     }
 
     body {
