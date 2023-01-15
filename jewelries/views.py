@@ -99,7 +99,7 @@ def add_jewelry(request):
 
 
 def edit_jewelry(request, jewelry_id):
-    """ Edit jewelry in the store """
+    """ Edit jewelry in the eshop """
     # if not request.user.is_superuser:
     #     messages.error(request, 'Sorry, only store owners can do that.')
     #     return redirect(reverse('home'))
@@ -125,3 +125,15 @@ def edit_jewelry(request, jewelry_id):
     }
 
     return render(request, template, context)
+
+
+def delete_jewelry(request, jewelry_id):
+    """ Delete jewelry from the eshop """
+    # if not request.user.is_superuser:
+    #     messages.error(request, 'Sorry, only store owners can do that.')
+    #     return redirect(reverse('home'))
+
+    jewelry = get_object_or_404(Jewelry, pk=jewelry_id)
+    jewelry.delete()
+    messages.success(request, 'Jewelry deleted!')
+    return redirect(reverse('jewelries'))
