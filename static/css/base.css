@@ -176,6 +176,21 @@ form>div {
     text-decoration: none;
 }
 
+/* jewelry add/edit form img field */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {

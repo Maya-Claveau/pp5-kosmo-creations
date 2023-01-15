@@ -73,6 +73,7 @@ def jewelry_detail(request, jewelry_id):
 
     return render(request, 'jewelries/jewelry_detail.html', context)
 
+
 @login_required
 def add_jewelry(request):
     """ add a jewelry to the e-shop """
@@ -97,6 +98,7 @@ def add_jewelry(request):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_jewelry(request, jewelry_id):
@@ -126,6 +128,7 @@ def edit_jewelry(request, jewelry_id):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def delete_jewelry(request, jewelry_id):
