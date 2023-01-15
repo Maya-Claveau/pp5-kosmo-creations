@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -72,12 +73,12 @@ def jewelry_detail(request, jewelry_id):
 
     return render(request, 'jewelries/jewelry_detail.html', context)
 
-
+@login_required
 def add_jewelry(request):
     """ add a jewelry to the e-shop """
-    # if not request.user.is_superuser:
-    #     messages.error(request, 'Sorry, only store owners can do that.')
-    #     return redirect(reverse('home'))
+    if not request.user.is_superuser:
+        messages.error(request, 'Authorised access only!')
+        return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = JewelryForm(request.POST, request.FILES)
@@ -97,12 +98,12 @@ def add_jewelry(request):
 
     return render(request, template, context)
 
-
+@login_required
 def edit_jewelry(request, jewelry_id):
     """ Edit jewelry in the eshop """
-    # if not request.user.is_superuser:
-    #     messages.error(request, 'Sorry, only store owners can do that.')
-    #     return redirect(reverse('home'))
+    if not request.user.is_superuser:
+        messages.error(request, 'Authorised access only!')
+        return redirect(reverse('home'))
 
     jewelry = get_object_or_404(Jewelry, pk=jewelry_id)
     if request.method == 'POST':
@@ -126,12 +127,12 @@ def edit_jewelry(request, jewelry_id):
 
     return render(request, template, context)
 
-
+@login_required
 def delete_jewelry(request, jewelry_id):
     """ Delete jewelry from the eshop """
-    # if not request.user.is_superuser:
-    #     messages.error(request, 'Sorry, only store owners can do that.')
-    #     return redirect(reverse('home'))
+    if not request.user.is_superuser:
+        messages.error(request, 'Authorised access only!')
+        return redirect(reverse('home'))
 
     jewelry = get_object_or_404(Jewelry, pk=jewelry_id)
     jewelry.delete()
