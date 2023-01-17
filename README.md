@@ -1,8 +1,8 @@
-# Welcome to **[Kosmo Creations](add link here)**
+# Welcome to **[Kosmo Creations](https://kosmo-creations.herokuapp.com/)**
 
 <img src="" width="800">
 
-The 5th portfolio project for Code Institute is here. It is a E-commerce web application, click [Here](add link here) to have a look.
+The 5th portfolio project for Code Institute is here. It is a E-commerce web application, click [Here](https://kosmo-creations.herokuapp.com/) to have a look.
 
 ## **Purpose of the site**
 
@@ -14,7 +14,7 @@ Site owner’s main objectives are:
 - to have a platform where users can openly share their experience with us
 - to take action on the things need to improve
 - to make money of course
-- to spread love and kindness by help those in need with donating a % of the revenue to the local aniaml shelter
+- to spread love and kindness by help those in need with donating a % of the revenue to the local animal shelter
 
 Site user’s main objectives are:
 
@@ -54,7 +54,7 @@ The tasks users can perform depends on their role. On this site, there are admin
 | 6   |        [Receive email confirmation after registration](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/6)        |   Done |
 | 7   |                 [Login/logout to an account](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/7)                  |   Done |
 | 8   |                       [Reset password](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/8)                        |   todo |
-| 9   |                 [Have a personalised profile](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/9)                 |    wip |
+| 9   |                 [Have a personalised profile](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/9)                 |   Done |
 | 10  |                        [Sort Product](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/10)                        |   Done |
 | 11  |                    [Categorize Products](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/11)                     |   Done |
 | 12  |        [Search for a product by name or description](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/12)         |   Done |
@@ -62,17 +62,17 @@ The tasks users can perform depends on their role. On this site, there are admin
 | 14  |            [Easiliy select quantity of a product](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/14)            |   Done |
 | 15  |                  [View shopping bag items](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/15)                   |   Done |
 | 16  | [Modify the quantity of individual items in my shopping bag](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/16) |   Done |
-| 17  |               [Enter the payment information](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/17)                |    wip |
-| 18  |       [Have info prefilled in order confirmation page](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/18)       |    wip |
-| 19  |         [View an order confirmation after checkout](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/19)          |    wip |
-| 20  |         [Receive email confirmation after checkout](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/20)          |    wip |
-| 21  |              [As an admin I can add a product](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/21)               |   todo |
-| 22  |              [As an admin I can edit a product](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/22)              |   todo |
-| 23  |             [As an admin I can delete a product](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/23)             |   todo |
-| 24  |              [View the inventory of a product](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/24)               |    wip |
+| 17  |               [Enter the payment information](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/17)                |   Done |
+| 18  |       [Have info prefilled in order confirmation page](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/18)       |   Done |
+| 19  |         [View an order confirmation after checkout](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/19)          |   Done |
+| 20  |         [Receive email confirmation after checkout](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/20)          |   Done |
+| 21  |              [As an admin I can add a product](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/21)               |   Done |
+| 22  |              [As an admin I can edit a product](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/22)              |   Done |
+| 23  |             [As an admin I can delete a product](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/23)             |   Done |
+| 24  |              [View the inventory of a product](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/24)               |   todo |
 | 25  |                    [View my own wishlist](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/25)                    |   todo |
 | 26  |               [Write a review after purchase](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/26)                |   todo |
-| 27  |                   [View shopping history](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/27)                    |   todo |
+| 27  |                   [View shopping history](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/27)                    |   Done |
 | 28  |    [View the products in the shopping bag for buy later](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/28)     |   todo |
 | 29  |      [Provide visual feedback after operation by users](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/29)      |   Done |
 
