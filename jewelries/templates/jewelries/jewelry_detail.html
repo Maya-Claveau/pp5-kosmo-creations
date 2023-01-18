@@ -78,7 +78,7 @@
                             </div>
 
                             <div
-                                class="col-12 d-flex flex-column-reverse justify-content-between flex-md-row justify-content-md-start ">
+                                class="col-12 d-flex flex-column-reverse justify-content-between flex-md-row justify-content-md-start">
                                 <a href="{% url 'jewelries' %}"
                                     class="btn btn-outline-info btn-buy-now rounded-1 mt-3 mt-md-5 me-md-3">
                                     <span class="icon">
@@ -92,7 +92,8 @@
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% else %}
-                            <div class="col-12 text-black">
+                            <div
+                                class="col-12 d-flex flex-column-reverse justify-content-between flex-md-row justify-content-md-start">
                                 <p class="text-muted">Sold Out</p>
                                 <div class="col-12 mt-3">
                                     <a href="{% url 'jewelries' %}" class="btn btn-outline-info btn-buy-now rounded-1">
