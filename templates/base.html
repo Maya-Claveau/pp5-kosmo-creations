@@ -28,6 +28,9 @@
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
+    <!-- Mailchimp Signup Form -->
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+
     <!-- Favicon -->
     <link rel="icon" type="image/xicon" href="{% static 'favicon/favicon.ico' %}">
     {% endblock %}
@@ -180,6 +183,9 @@
     {% endblock %}
 
     {% block content %}
+    {% endblock %}
+
+    {% block footer %}
     {% endblock %}
 
     {% block postloadjs %}
