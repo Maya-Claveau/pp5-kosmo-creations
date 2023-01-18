@@ -8,7 +8,6 @@ from jewelries.models import Jewelry
 
 import json
 import time
-import stripe
 
 
 class StripeWH_Handler:
