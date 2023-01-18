@@ -188,6 +188,11 @@ form>div {
     cursor: pointer;
 }
 
+/* mailchimp */
+#mc_embed_signup>form {
+    margin: 0 !important;
+}
+
 /* -------------------------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
