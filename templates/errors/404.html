@@ -6,16 +6,20 @@
         <div class="col"></div>
     </div>
 </div>
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
-            <h1 class="display-4 logo-font text-black">
-                The page you are looking for isn't available
-            </h1>
+
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-12 col-md-6 my-auto">
+            <h2 class="logo-font mt-5 text-black">
+                Ooops!
+            </h2>
+            <h3 class="text-black">We can't find the page you are looking for.
+            </h3>
+            <!-- button that will lead to the all jewelries page -->
             <div class="my-5">
                 <h4>
-                    <a href="{% url 'jewelries' %}" class="shop-now-button btn btn-lg rounded-1 text-uppercase py-3">
-                        Return to shop
+                    <a href="{% url 'jewelries' %}"
+                        class="btn-buy-now btn btn-info btn-lg rounded-1 text-uppercase py-1">take me back
                     </a>
                 </h4>
             </div>
