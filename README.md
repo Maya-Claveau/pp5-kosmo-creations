@@ -129,31 +129,96 @@ I chose Barlow because it looks elegant and easy to read for the users, and a mi
 
 ---
 
-## **Finished Site**
+## **Deployment Site - version 1.0**
 
-talk about landing page and ui
+### **_Landing Page:_**
+
+- when first land on the home page, user will see logo in the center
+- search bar on the left and account and shopping cart on the right
+- below is the main navigation bar which tells the user straight away what we have in the store. With the posibility to filter by price, rating, category or to see all
+- a welcome message with the button leads to the all jewelries page
+- ways of stay in touch with one social platform(for now) - Facebook and the link to our facebook page
+- a form where user can sign up for the newsletter to stay informed about our latest news, evens etc
+- at the bottom of this page, user will find a privacy policy link because GDPR is ultra important.
+
+Access depending on the roles:
+
+- First time or unregistered users will have the possibility to register for an account
+- Registered user can login from here
+- Admin can also login from here and manage the products
+
+### **_Jewelries Page:_**
+
+A range of jewelries that the store is offering, here you can also use filter function from nav bar, as well as the sorting function. Here you can see the image of each jewelry, with its name, price, category and ratings. Click on any jewelry will lead you to the next page with more details.
+
+Access depending on the roles:
+
+- All users can view this page, as it will give the maximum exposure of our jewelries
+- Admin can edit or delete any jewelry here
+
+### **_Jewelry Detail Page:_**
+
+Here you can see the larger image of the jewelry, in addition to the information you already see from the previous page, there is detailed description to give user more information. If the item is sold out, user will have one button which will lead to all jewelries page. If the item is in stock, user will be able to add it to the shopping cart.
+
+Access depending on the roles:
+
+- All users can view this page, as it will give the maximum exposure of our jewelries
+- Admin can also edit or delete any jewelry here
+
+### **_Shopping Cart Page:_**
+
+In this page you will see the image of the jewelry you have added, along with the price info and the possibility of changing the quantity. The subtotal, delivery fee and grand total is displayed to inform the user.
+
+Access depending on the roles:
+
+- First time or unregistered users will NOT have the possibility to proceed to the next step, however, options of register or login is provided.
+- Registered user can login from here, if already logged in, user will see the checkout button which will take them to the checkout page
+- Admin has the same right as the logged in users.
+
+### **_Checkout Page_**
+
+On the left side there is a form the user need to fill in for example name, email and delivery address. Below it there is the payment details. On the right side, is the order summary displaying the smaller image of the jewelries, name, quantity, subtotal, delivery and grand total.
+
+Access depending on the roles:
+
+- First time or unregistered users will NOT have access to this page.
+- Logged in users will be able to fill in the form, as well as the payment details to proceed with the checkout.
+- Admin has the same right as the logged in users.
 
 Desktop
 
-<details><summary>Not logged in user</summary>
-<img src="">
+<details><summary>First time or unregistered user</summary>
+<img src="static/readme/1st-time-user-desktop.jpg" width="800">
+<img src="static/readme/1st-time-user-desktop.jpg" width="800">
+<img src="static/readme/jewelries-filter.jpg" width="800">
+<img src="static/readme/jewelries-sort.jpg" width="800">
+<img src="static/readme/jewelry-detail-soldout.jpg" width="800">
+<img src="static/readme/jewelry-details-in stock.jpg" width="800">
+<img src="static/readme/shopping-cart-not-loggedin.jpg" width="800">
 </details>
 
-<details><summary>Logged in user</summary>
-<img src="">
+<details><summary>Registered or logged in user</summary>
+<img src="static/readme/registered-user-desktop.jpg" width="800">
+<img src="static/readme/shopping-cart-loggedin.jpg" width="800">
+<img src="static/readme/checkout-pg.jpg" width="800">
+<img src="static/readme/checkout-pg-payment.jpg" width="800">
+</details>
+
+<details><summary>Admin</summary>
+<img src="static/readme/admin-mgt.jpg" width="800">
+<img src="static/readme/admin-mgt-2.jpg" width="800">
 </details>
 
 <br>
 
 Mobile
 
-<details><summary>Not logged in user
-</summary>
-<img src="">
+<details><summary>First time or unregistered user</summary>
+<img src="static/readme/mob-1st-time-user.jpg" width="400">
+<img src="static/readme/mob-1st-time-user-footer.jpg" width="400">
 </details>
 
-<details><summary>Logged in User
-</summary>
+<details><summary>Registered user</summary>
 <img src="">
 </details>
 
