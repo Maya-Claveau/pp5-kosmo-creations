@@ -27,6 +27,9 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/xicon" href="{% static 'favicon/favicon.ico' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -58,9 +61,6 @@
     {% endblock %}
 
     <title>Kosmo Creations {% block extra_title %}{% endblock %}</title>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
