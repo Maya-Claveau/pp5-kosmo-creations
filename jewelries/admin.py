@@ -12,6 +12,7 @@ class JewelryAdmin(admin.ModelAdmin):
         'price',
         'rating',
         'image',
+        'inventory'
     )
 
     ordering = ('name',)

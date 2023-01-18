@@ -220,11 +220,9 @@ Main Tech used are:
 
 - [techsini.com](https://techsini.com/multi-mockup/index.php) for generating the mock up
 
-- [Freepik](https://www.freepik.com/) for downloading the nft images
-
-- [Figma](https://www.figma.com/) for making the logo
-
 - [Bootstrap](https://getbootstrap.com/) was used to speed up the design the style and responsiveness of the website
+
+- [Favicon.io](https://favicon.io/) was used to generate the favicon for the site
 
 ### **Difficulties I manage to overcome**
 
