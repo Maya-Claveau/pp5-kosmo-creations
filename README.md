@@ -30,11 +30,11 @@ Site user’s main objectives are:
 
 ## **Why This**
 
-The reason that I decided to create a jewelry store for my 5th and last project at CI, is that the designer of those beautiful jewelries – Eudokia Michaelidou holds a very special place in my heart. She is the most generous, kind, beautiful human being inside out. When I first arrived in Cyprus, as a foreign student, with limited knowledge of how things work outside of the college, and no knowledge of Greek, I was clueless and lost. Until I was lucky enough to have met Eudokia. We connected instantly, she said I was her lost child from China. She treated me as her own child...
+The reason that I decided to create a jewelry store for my 5th and last project at CI, is that the designer of those beautiful jewelries – Eudokia Michaelidou holds a very special place in my heart. She is the most generous, kind, beautiful human being inside out. When I first arrived in Cyprus, as a foreign student, with limited knowledge of how things work outside of the college, and no knowledge of Greek, I was clueless and lost. Until I was lucky enough to have met Eudokia. We connected instantly, she said I was her lost child from China. She treated me as her own child.
 
-**PAUSE** ... here I should give a bit more info about her situation at that time. She isn’t rich and have a big fat pile of cash laying around so she can just randomly take someone under her wing with no impact on her own life. At that time, she was a single mother with 4 children, no job and living on the government support. Struggling is an understatement to describe her situation, but still she took me in ...
+..._PAUSE_ ... here I should give a bit more info about her situation at that time. She isn’t rich and have a big fat pile of cash laying around so she can just randomly take someone under her wing with no impact on her own life. At that time, she was a single mother with 4 children, no job and living on the government support. Struggling is an understatement to describe her situation, but still she took me in ...
 
-**RESUME** ... she shared everything she had with no hesitance. Even treated me better than her own children sometimes. There are no words can describe how grateful I feel towards her, and she is the reason I feel very strong connection with Cyprus and see it as my second home country.
+..._RESUME_ ... she shared everything she had with no hesitance. Even treated me better than her own children sometimes. There are no words can describe how grateful I feel towards her, and she is the reason I feel very strong connection with Cyprus and see it as my second home country.
 
 Fast forward today, she started this small business of making jewelries about a year ago, and I really wanted to utilize my newly gained skill to help her to have a digital presence. If Covid has taught me anything, it would be that digital business is the further, without it, you are failing before even start. So here we are, [Kosmo Creations](https://kosmo-creations.herokuapp.com/) with love from Cyprus!
 
@@ -67,6 +67,11 @@ Reserach on SEO was conducted, keywords that are included in this project were c
 #### _GDPR_
 
 Privacy Policy, one of the most important policy for online business, is also included at the bottom of the home page. To demostrate that we take GDPR very serious. [Privacy Policy Generator](https://www.privacypolicygenerator.info/) was used to generate the privacy policy attached.
+
+<details>
+<summary>Privacy Policy</summary>
+<img src="static/readme/privacy-policy.jpg" width="800">
+</details>
 
 <br>
 
@@ -121,7 +126,8 @@ The tasks users can perform depends on their role. On this site, there are admin
 
 Below is the Database structure that this project is based on. There are User, Product, Product-inventory, Order, Review, Wishlist, and shopping cart buy later, you can also see their lationships between each table.
 
-<img src="static/readme/database-schema-v6.jpg" width="800">
+<details><summary>Font and Color palette</summary>
+<img src="static/readme/database-schema-v6.jpg"></details>
 
 <br>
 
