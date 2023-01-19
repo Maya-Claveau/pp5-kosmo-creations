@@ -185,7 +185,31 @@ Access depending on the roles:
 - Logged in users will be able to fill in the form, as well as the payment details to proceed with the checkout.
 - Admin has the same right as the logged in users.
 
-Desktop
+### **_Order confirmation Page_**
+
+When the payment went through successfully, user will land on the order confirmation page, which contains information such as their unique order ID, ordered items' name, quantity, price, delivery address and all the charges.
+
+Access depending on the roles:
+
+- First time or unregistered users will NOT have access to this page.
+- Logged in users will see this page with relevant information.
+- Admin has the same right as the logged in users.
+
+### **_Profile Page_**
+
+The link to profile under Account is only visible to logged in users. User has the posibility to create a personalisied profile if they wish. Where they can save information such as delivery address, so they can re-use it for future purchase. As well as the order history, including the order number, date, items they have purchased and the order total.
+
+Access depending on the roles:
+
+- First time or unregistered users will NOT have access to this page.
+- Logged in users will see this page with relevant information.
+- Admin has the same right as the logged in users.
+
+### **_Product Management Page_**
+
+For admin uers only, when they login, under the Account, there is an extra link of Product Management, that leads to the product management page. Where admin users can add, edit, and delete any product.
+
+Desktop View
 
 <details><summary>First time or unregistered user</summary>
 <img src="static/readme/1st-time-user-desktop.jpg" width="800">
@@ -202,16 +226,22 @@ Desktop
 <img src="static/readme/shopping-cart-loggedin.jpg" width="800">
 <img src="static/readme/checkout-pg.jpg" width="800">
 <img src="static/readme/checkout-pg-payment.jpg" width="800">
+<img src="static/readme/order-confirmation-1.jpg" width="800">
+<img src="static/readme/order-confirmation-2.jpg" width="800">
+<img src="static/readme/link-to-profile.jpg" width="800">
+<img src="static/readme/profile-pg.jpg" width="800">
 </details>
 
 <details><summary>Admin</summary>
 <img src="static/readme/admin-mgt.jpg" width="800">
 <img src="static/readme/admin-mgt-2.jpg" width="800">
+<img src="static/readme/product-mgt-link.jpg" width="800">
+<img src="static/readme/product-mgt-pg.jpg" width="800">
 </details>
 
 <br>
 
-Mobile
+Mobile view
 
 <details><summary>First time or unregistered user</summary>
 <img src="static/readme/mob-1st-time-user.jpg" width="400">
