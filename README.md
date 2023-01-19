@@ -44,6 +44,36 @@ Fast forward today, she started this small business of making jewelries about a 
 
 <br>
 
+### **Business Model**
+
+It is a B2C business model, with targeted customer being individuals, and focus on single transactions. It is aiming to target individuals who is interested in online shopping, jewelry lover and looking for unique and personalised designs. Or people who want to purchase unique gifts for their loved ones.
+
+### **Web Marketing**
+
+#### _Subscribe to Newsletter_
+
+Customer has the possibility to subscribe to the newsletter to keep informed about latest design, special events. Mailchimp service was used for this purposes.
+
+#### _SEO_
+
+Reserach on SEO was conducted, keywords that are included in this project were carefully chosen and comparied again their visibility and scores. [Wordtracker](https://www.wordtracker.com/) was used for this purpose.
+
+<details>
+<summary>SEO key words</summary>
+<img src="static/readme/seo-key-words.jpg" width="800">
+</details>
+<br>
+
+#### _GDPR_
+
+Privacy Policy, one of the most important policy for online business, is also included at the bottom of the home page. To demostrate that we take GDPR very serious. [Privacy Policy Generator](https://www.privacypolicygenerator.info/) was used to generate the privacy policy attached.
+
+<br>
+
+---
+
+<br>
+
 ### **User Stories**
 
 The tasks users can perform depends on their role. On this site, there are admin, first time user and returned users, tasks that they have the authorization to perform are shown in below table, as well as their associated User Stories from [Github](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues). Please see details and implementaion status below:
@@ -239,18 +269,7 @@ Desktop View
 <img src="static/readme/product-mgt-pg.jpg" width="800">
 </details>
 
-<br>
-
-Mobile view
-
-<details><summary>First time or unregistered user</summary>
-<img src="static/readme/mob-1st-time-user.jpg" width="400">
-<img src="static/readme/mob-1st-time-user-footer.jpg" width="400">
-</details>
-
-<details><summary>Registered user</summary>
-<img src="">
-</details>
+The site is built with responsive design in mind, therefore it can be viewed from different size devices, supporting smart phone, tablet and desktop.
 
 ---
 

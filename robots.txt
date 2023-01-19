@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /shopping_cart/
+Sitemap: https://kosmo-creations.herokuapp.com/sitemap.xml

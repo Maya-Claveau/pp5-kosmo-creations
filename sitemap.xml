@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/shopping_cart/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/?sort=price&amp;direction=asc</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/?sort=category&amp;direction=asc</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/?category=bracelet</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/?category=necklace</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/?category=anklet</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/?category=gift%20set</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/?category=offers</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/6/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/1/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/24/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/25/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/20/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/10/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/11/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/2/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/12/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/3/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/22/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/26/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/18/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/4/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/13/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/27/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/15/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/23/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/14/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/5/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/16/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/17/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/8/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/19/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/7/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/21/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kosmo-creations.herokuapp.com/jewelries/9/</loc>
+  <lastmod>2023-01-19T09:01:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
