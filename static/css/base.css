@@ -195,10 +195,11 @@ form>div {
 
 /* sticky footer */
 .footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     line-height: 30px;
+    margin-top: 30px;
 }
 
 /* -------------------------------------------------- Media Queries */
