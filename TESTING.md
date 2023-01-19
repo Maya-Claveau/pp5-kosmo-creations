@@ -58,6 +58,26 @@ Features were tested with different users to ensure testing from different devic
 
 The site is built with responsive design in mind, therefore it can be viewed from different size devices, supporting smart phone, tablet and desktop.
 
+### **Lighthouse Scores**
+
+Home page
+
+Accessibility score on desktop is 88 due to render-blocking resources
+
+<details><summary>Desktop</summary>
+<img src="static/testing/lh-desktop-home.jpg" width="800">
+</details>
+
+<br>
+
+Performance score on mobile is 69 due to render-blocking resources
+
+<details><summary>Mobile</summary>
+<img src="static/testing/lh-mob-home.jpg" width="800">
+</details>
+
+<br>
+
 ### _Bugs_
 
 Shopping Cart page
