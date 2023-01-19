@@ -193,6 +193,14 @@ form>div {
     margin: 0 !important;
 }
 
+/* sticky footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    line-height: 30px;
+}
+
 /* -------------------------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

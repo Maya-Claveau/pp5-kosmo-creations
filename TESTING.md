@@ -93,4 +93,6 @@ Shopping Cart page
 
 - On the jewelry detail page, I have the logic in place for if there is inventory, it shows options for choosing the quantity the add to cart button, otherwise it only show "Sold out" and the continue shopping button. However, everything was showing sold out even there is inventory. After talking to Ci's Tutor - Josh, the problem didn't get fixed, but he helped me to find where the problem was. And I managed to fix it myself. Then after deployment, everything were showing sold out again, after long hours of investigation, I realised that inventory wasn't in the admin, therefore django couldn't find it, it was doing what my code told it to do. So I added the inventory to admin.py, increased the inventory and now the logic works. What I learnt is how to determine where to look for when there is an error. Josh showed me just that. I am really grateful.
 
+- Footer was floating on logout page, login page, register page and my profile page. I manage to find the problem and fixed it.
+
 - Above just few examples, I can't remember how many things went wrong and some I tried and fixed successfully, a quick search on slack is always helpful. Some I needed help from the tutors.

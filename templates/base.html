@@ -192,11 +192,11 @@
         {% endblock %}
     </main>
 
+    {% include 'includes/footer.html' %}
+
     {% block postloadjs %}
     <script src="{% static 'js/base.js' %}" type="module"></script>
     {% endblock %}
-
-    {% include 'includes/footer.html' %}
 </body>
 
 </html>
