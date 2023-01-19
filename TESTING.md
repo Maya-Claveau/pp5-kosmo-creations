@@ -142,6 +142,54 @@ My Profile Page
 
 <br>
 
+Product Management Page
+
+<details><summary>Desktop</summary>
+<img src="static/testing/lh-desktop-prod-mgt.jpg" width="800">
+</details>
+
+<details><summary>Mobile</summary>
+<img src="static/testing/lh-mob-prod-mgt.jpg" width="800">
+</details>
+
+<br>
+
+Shopping Cart Page
+
+<details><summary>Desktop</summary>
+<img src="static/testing/lh-desktop-shopping-cart.jpg" width="800">
+</details>
+
+<details><summary>Mobile</summary>
+<img src="static/testing/lh-mob-shopping-cart.jpg" width="800">
+</details>
+
+<br>
+
+Checkout Page
+
+<details><summary>Desktop</summary>
+<img src="static/testing/lh-desktop-prod-mgt.jpg" width="800">
+</details>
+
+<details><summary>Mobile</summary>
+<img src="static/testing/lh-mob-prod-mgt.jpg" width="800">
+</details>
+
+<br>
+
+Checkout Success Page
+
+<details><summary>Desktop</summary>
+<img src="static/testing/lh-desktop-prod-mgt.jpg" width="800">
+</details>
+
+<details><summary>Mobile</summary>
+<img src="static/testing/lh-mob-prod-mgt.jpg" width="800">
+</details>
+
+<br>
+
 ### _Bugs_
 
 Shopping Cart page
