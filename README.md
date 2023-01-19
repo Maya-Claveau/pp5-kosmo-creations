@@ -52,7 +52,7 @@ It is a B2C business model, with targeted customer being individuals, and focus 
 
 #### _Subscribe to Newsletter_
 
-Customer has the possibility to subscribe to the newsletter to keep informed about latest design, special events. Mailchimp service was used for this purposes.
+Customer has the possibility to subscribe to the newsletter to keep informed about latest design, special events. [Mailchimp](https://mailchimp.com/) service was used for this purposes.
 
 #### _SEO_
 
@@ -156,6 +156,12 @@ I chose Barlow because it looks elegant and easy to read for the users, and a mi
 
 <details><summary>Font and Color palette</summary>
 <img src="static/readme/colors-fonts.jpg"></details>
+
+<br>
+
+### **Agile Methodology**
+
+[Github Project](https://github.com/users/Maya-Claveau/projects/3) was used to implement the Agile methodology. It is very uselful tool to help me keep on track with my tasks and prioritise them accordingly.
 
 ---
 
@@ -275,7 +281,7 @@ The site is built with responsive design in mind, therefore it can be viewed fro
 
 ## **Testing**
 
-Details regarding Testing include Code Validation can be found in a separate file [TESTING.md](TESTING.md)
+Details regarding Testing include Code Validation can be found in [TESTING.md](TESTING.md) file.
 
 ---
 
@@ -305,6 +311,8 @@ Main Tech used are:
 
 - [ElephantSQL](https://www.elephantsql.com/) for hosting database
 
+- [Stripe](https://stripe.com/) for providng free payment gateway
+
 - [draw.io](https://www.draw.io) for creating database relationship
 
 - [AWS](https://AWS.com) for store the images and css files used in this project
@@ -319,33 +327,31 @@ Main Tech used are:
 
 - [Favicon.io](https://favicon.io/) was used to generate the favicon for the site
 
-### **Difficulties I manage to overcome**
+- [Mailchimp](https://mailchimp.com/) was used for subscribe newsletters.
 
-## Below are example of list of things I struggled with:
-
--
--
--
--
--
--
+- [Privacy Policy Generator](https://www.privacypolicygenerator.info/) was used to generate the privacy policy.
 
 ## **Credits**
 
 - Code Institute's **Boutique Ado walkthrough**
-
--
-
--
-
--
-
--
-
--
+- [Youtube](https://youtube.com/) for different tutorials such as bootstrap, css, django etc
+- [Very Academy](https://www.youtube.com/@veryacademy) for django related topics
+- [Codemy](https://www.youtube.com/@Codemycom) for django related topics
+- [Stack Overflow](https://stackoverflow.com/) for different topics
+- [Google](https://google.com/) of course, I know I won't survive this without it.
 
 <br>
 
 ## **Acknowledgments**
 
+- Amazing Tutors from Code Institute, they not only helped me to fix the problems, also guide me and provide more information to learn from it. I also learnt how they debug and the thinking process where to look and how to find the problem in the first place.
+
+- My mentor who is supporting me all the way and giving me more ideas and challenges
+
+- My family, throughout this project, a lot of family time were sacrificed, I am very grateful for their understanding and support.
+
+- CI's Slack community for keeping me sane and knowing I am not alone in this.
+
 THANK YOU ALL!!!
+
+<small>\*Note: The current version does not contain all the features I have planned for this project, juggling between new job - family commitment - project with deadlines are overwhelming to say the least. Given the time I could spend, I did try my best.</small>

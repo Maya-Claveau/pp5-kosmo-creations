@@ -49,6 +49,22 @@ this is without summernotewidget
 
 <img src="">
 
+Shopping Cart page
+
+- The position of Update link was not aligned properly, I manage to fix it, but between 576px - 767px, the button for Update and Delete are not aligned correctly.
+<details><summary>Shopping Cart</summary>
+<img src="static/readme/bug-shopping-cart.jpg" width="800">
+</details>
+
+## Below are example of list of things I struggled with:
+
+-
+-
+-
+-
+-
+-
+
 ### **Unfixed bugs:**
 
 Post.object – put it under unfixed bugs Pylint is pythons error message, and unfortunately python can’t see what Django is doing, so as an example, objects are there, python just can’t see that Django is handling the objects.
