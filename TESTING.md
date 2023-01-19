@@ -40,14 +40,11 @@
 [CI Python Linter](https://pep8ci.herokuapp.com/) was used for validate python code
 No errors were found in the final verion. There was no report generated.
 
-- add post page: I had to remove the summernotewidget on the content field, because although it was working fine, but it does error during the code validation, so I decided to remove it after all.
+## **Manual Testing**
 
-this is with summernotewidget
-<img src="">
+Testing was done throughout the development, for each feature and on different sized devices, to ensure responsiveness.
 
-this is without summernotewidget
-
-<img src="">
+Features were tested with different users to ensure testing from different devices, sizes and browsers, to keep an eye for any potetial bugs while in developing stage.
 
 Shopping Cart page
 

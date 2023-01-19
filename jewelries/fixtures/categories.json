@@ -23,7 +23,7 @@
     "pk": 4,
     "model": "jewelries.category",
     "fields": {
-        "name": "gift set",
+        "name": "giftset",
         "friendly_name": "gift set"
     }
 }, {
