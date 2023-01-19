@@ -19,22 +19,28 @@
 <img src="static/testing/html-index-pg.jpg">
 <summary>All Jewelries Page</summary>
 <img src="static/testing/html-jewelries-pg.jpg">
-<summary>all_posts.html</summary>
-<img src="">
-<summary>signup.html</summary>
-<img src="">
-<summary>login.html</summary>
-<img src="">
-<summary>logout.html</summary>
-<img src="">
-<summary>shared_posts.html</summary>
-<img src="">
-<summary>add_post.html</summary>
-<img src="">
-<summary>update_post.html</summary>
-<img src="">
-<summary>delete_post.html</summary>
-<img src="">
+<summary>Jewelry Details Page</summary>
+<img src="static/testing/html-jewelries-detail-pg.jpg">
+<summary>Shopping Cart Page</summary>
+<img src="static/testing/html-shopping-cart-pg.jpg">
+<summary>Login Page</summary>
+<img src="static/testing/html-login-pg.jpg">
+<summary>My Profile Page</summary>
+<img src="static/testing/html-my-profile-pg.jpg">
+<summary>Checkout Page</summary>
+There is a warning here, since the empty heading element was left empty on purpose, I just left it there.
+<img src="static/testing/html-checkout-pg.jpg">
+<summary>Checkout Success Page</summary>
+<img src="static/testing/html-checkout-success-pg.jpg">
+<summary>Logout Page</summary>
+<img src="static/testing/html-logout-pg.jpg">
+<summary>Register Page</summary>
+<img src="static/testing/html-register-pg.jpg">
+<summary>Product Management Page</summary>
+There are two errors on this page, however after investigation, both errors are coming from imported django file, due to the time pressure, I decided not to fix it. Details can be seen from below screenshot.
+<img src="static/testing/html-prod-mgt-pg.jpg">
+<img src="static/testing/html-prod-mgt-pg-error.jpg">
+
 </details>
 
 <br>
