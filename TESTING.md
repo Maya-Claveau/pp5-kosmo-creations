@@ -78,6 +78,34 @@ Performance score on mobile is 69 due to render-blocking resources
 
 <br>
 
+All Jewelries page
+
+Initial performance score on all jewelries page was 39! Because the images I used were 2MB, my mentor suggested to use something less than 10KB for improvement. I used [iloveimg.come](https://www.iloveimg.com/) to first compress and then resize to make them 90%+ smaller, not the performance score is at 69. Still room for improvement obviously, so I tried to convert them into avif format, bad news I couldn't make it render on the page, given the time pressure I had to move on. But 69 is much better than 39, I will take that.
+
+<details><summary>Desktop</summary>
+<img src="static/testing/lh-desktop-jewelries.jpg" width="800">
+</details>
+
+On Mobile the performance score is 57, definetely need to figure out how to make avif work next time.
+
+<details><summary>Mobile</summary>
+<img src="static/testing/lh-mob-jewelries.jpg" width="800">
+</details>
+
+<br>
+
+Register Page
+
+<details><summary>Desktop</summary>
+<img src="static/testing/lh-desktop-register.jpg" width="800">
+</details>
+
+<details><summary>Mobile</summary>
+<img src="static/testing/lh-mob-register.jpg" width="800">
+</details>
+
+<br>
+
 ### _Bugs_
 
 Shopping Cart page
