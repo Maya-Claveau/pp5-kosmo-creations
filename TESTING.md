@@ -2,15 +2,15 @@
 
 ## **Code Validation**
 
-[Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used to validate CSS code
+[Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used to validate CSS code. It passes the validator without errors, however, there are some warnings, you can find the details in the screenshot. I looked into them, and don’t think is critical issue, so I just left them there.
 
 <details>
-<summary>CSS</summary>
-<img src="">
-<summary>CSS warnings</summary>
-<img src="">
+<summary>CSS and warnings</summary>
+<img src="static/testing/validation-css.jpg">
+<img src="static/testing/validation-css-warnings.jpg">
 </details>
-CSS code passes the validator without errors, however, there are some warnings, please see details in the screenshot. I looked into them, and don’t really know how to fix them at the moment, so I just left them there.
+
+<br>
 
 [Nu Html checker](https://validator.nu/) for validate HTML code
 
