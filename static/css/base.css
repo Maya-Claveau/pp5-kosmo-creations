@@ -234,4 +234,9 @@ form>div {
     #delivery-banner h4 {
         font-size: .9rem;
     }
+
+    /* make toast message fit to small screens */
+    .message-container {
+        width: 300px;
+    }
 }

@@ -251,8 +251,6 @@ Access depending on the roles:
 
 For admin uers only, when they login, under the Account, there is an extra link of Product Management, that leads to the product management page. Where admin users can add, edit, and delete any product.
 
-Desktop View
-
 <details><summary>First time or unregistered user</summary>
 <img src="static/readme/1st-time-user-desktop.jpg" width="800">
 <img src="static/readme/1st-time-user-desktop.jpg" width="800">
@@ -280,8 +278,6 @@ Desktop View
 <img src="static/readme/product-mgt-link.jpg" width="800">
 <img src="static/readme/product-mgt-pg.jpg" width="800">
 </details>
-
-The site is built with responsive design in mind, therefore it can be viewed from different size devices, supporting smart phone, tablet and desktop.
 
 ---
 

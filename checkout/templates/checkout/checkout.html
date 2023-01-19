@@ -86,20 +86,7 @@
                     {{ order_form.county_province_state | as_crispy_field }}
                     {{ order_form.post_code | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
-                    <div class="form-check form-check-inline float-end me-0">
-                        {% if user.is_authenticated %}
-                        <label for="id-save-info" class="form-check-label">Save this delivery information to my
-                            profile</label>
-                        <input id="id-save-info" name="save-info" type="checkbox" class="form-check-input ml-2 me-0"
-                            checked>
-                        {% else %}
-                        <label for="id-save-info" class="form-check-label">
-                            <a class="text-info" href="{% url 'account_login' %}">Login</a> to save this information on
-                            my profile or
-                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> to save it.
-                        </label>
-                        {% endif %}
-                    </div>
+
                 </fieldset>
                 <fieldset class="px-3">
                     <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
