@@ -106,6 +106,42 @@ Register Page
 
 <br>
 
+Login Page
+
+<details><summary>Desktop</summary>
+<img src="static/testing/lh-desktop-login.jpg" width="800">
+</details>
+
+<details><summary>Mobile</summary>
+<img src="static/testing/lh-mob-login.jpg" width="800">
+</details>
+
+<br>
+
+My Profile Page
+
+<details><summary>Desktop</summary>
+<img src="static/testing/lh-desktop-profile.jpg" width="800">
+</details>
+
+<details><summary>Mobile</summary>
+<img src="static/testing/lh-mob-profile.jpg" width="800">
+</details>
+
+<br>
+
+My Profile Page
+
+<details><summary>Desktop</summary>
+<img src="static/testing/lh-desktop-profile.jpg" width="800">
+</details>
+
+<details><summary>Mobile</summary>
+<img src="static/testing/lh-mob-profile.jpg" width="800">
+</details>
+
+<br>
+
 ### _Bugs_
 
 Shopping Cart page
