@@ -12,13 +12,13 @@
 
 <br>
 
-[W3C Markup Validation Service](https://validator.w3.org/) was used for validate HTML code
+[W3C Markup Validation Service](https://validator.w3.org/) was used for validate HTML code. Errors and warnings were taken care of until the code satisfy the requirements.
 
 <details><summary>HTML validation reports</summary>
-<summary>index.html</summary>
+<summary>Home Page</summary>
 <img src="static/testing/html-index-pg.jpg">
-<summary>contact.html</summary>
-<img src="">
+<summary>All Jewelries Page</summary>
+<img src="static/testing/html-jewelries-pg.jpg">
 <summary>all_posts.html</summary>
 <img src="">
 <summary>signup.html</summary>
@@ -36,6 +36,8 @@
 <summary>delete_post.html</summary>
 <img src="">
 </details>
+
+<br>
 
 [CI Python Linter](https://pep8ci.herokuapp.com/) was used for validate python code
 No errors were found in the final verion. There was no report generated.
