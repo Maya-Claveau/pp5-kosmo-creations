@@ -12,11 +12,11 @@
 
 <br>
 
-[Nu Html checker](https://validator.nu/) for validate HTML code
+[W3C Markup Validation Service](https://validator.w3.org/) was used for validate HTML code
 
-<details><summary>HTML</summary>
+<details><summary>HTML validation reports</summary>
 <summary>index.html</summary>
-<img src="">
+<img src="static/testing/html-index-pg.jpg">
 <summary>contact.html</summary>
 <img src="">
 <summary>all_posts.html</summary>
