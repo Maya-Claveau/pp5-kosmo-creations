@@ -195,12 +195,31 @@ form>div {
 
 /* sticky footer */
 .footer {
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
     line-height: 30px;
-    margin-top: 30px;
+    clear: both;
 }
+
+/* prevent footer from covering content */
+.mgt-form {
+    margin-bottom: 80px;
+}
+
+.jewelry-details-container {
+    margin-bottom: 80px;
+}
+
+.cart-box {
+    margin-bottom: 80px;
+}
+
+#payment-form {
+    margin-bottom: 90px;
+}
+
+
 
 /* -------------------------------------------------- Media Queries */
 

@@ -181,10 +181,10 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-lg-7 text-center">
+        <div class="col-12 col-lg-7 text-center cart-box">
             {% if from_profile %}
             <a href="{% url 'profile' %}" class="btn btn-outline-info rounded-1 my-2">
-                <span class="icon mr-2">
+                <span class="icon">
                     <i class="fas fa-angle-left"></i>
                 </span>
                 <span class="text-uppercase">Back to Profile!</span>
@@ -192,7 +192,7 @@
             {% else %}
             <a href="{% url 'jewelries' %}?category=new_arrivals,deals,clearance"
                 class="btn btn-outline-info rounded-1 my-2">
-                <span class="icon mr-2">
+                <span class="icon">
                     <i class="fas fa-gifts"></i>
                 </span>
                 <span class="text-uppercase">Check out our latest deals!</span>
