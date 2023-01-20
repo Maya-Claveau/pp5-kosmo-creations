@@ -230,4 +230,10 @@ Jewelry Detail Page
 
 <br>
 
+### Unsolved Bugs
+
+On the checkout page, when the logged in user check the box of save their information, the info doesn't get saved to their profile for some reason. But if the user update info in their profile, the change is reflected on the checkout page. Due to the time pressure, I didn't manage to find the cause, therefore I removed that bit, so it is not visible to the user, but the backend code are still in the project as I intend to fix it in the next sprint.
+
+<br>
+
 Above just few examples, I can't remember how many things went wrong and some I tried and fixed successfully, a quick search on slack is always helpful. Some I needed help from the tutors. I am so grateful for CI's Tutor's support!!!!
