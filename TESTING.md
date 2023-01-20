@@ -169,11 +169,11 @@ Shopping Cart Page
 Checkout Page
 
 <details><summary>Desktop</summary>
-<img src="static/testing/lh-desktop-prod-mgt.jpg" width="800">
+<img src="static/testing/lh-desktop-checkout.jpg" width="800">
 </details>
 
 <details><summary>Mobile</summary>
-<img src="static/testing/lh-mob-prod-mgt.jpg" width="800">
+<img src="static/testing/lh-mob-checkout.jpg" width="800">
 </details>
 
 <br>
@@ -181,11 +181,11 @@ Checkout Page
 Checkout Success Page
 
 <details><summary>Desktop</summary>
-<img src="static/testing/lh-desktop-prod-mgt.jpg" width="800">
+<img src="static/testing/lh-desktop-checkout-success.jpg" width="800">
 </details>
 
 <details><summary>Mobile</summary>
-<img src="static/testing/lh-mob-prod-mgt.jpg" width="800">
+<img src="static/testing/lh-mob-checkout-success.jpg" width="800">
 </details>
 
 <br>
