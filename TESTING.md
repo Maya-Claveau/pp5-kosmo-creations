@@ -58,6 +58,16 @@ Features were tested with different users to ensure testing from different devic
 
 The site is built with responsive design in mind, therefore it can be viewed from different size devices, supporting smart phone, tablet and desktop.
 
+<details><summary>Mobile view as Admin</summary>
+<img src="static/testing/mob-view-1.gif" width="600">
+<img src="static/testing/mob-view-3.gif" width="600">
+<img src="static/testing/mob-view-2.gif" width="600">
+<img src="static/testing/mob-view-4.gif" width="600">
+<img src="static/testing/mob-view-5.gif" width="600">
+</details>
+
+<br>
+
 ### **Lighthouse Scores**
 
 Home page
