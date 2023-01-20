@@ -190,9 +190,9 @@ Checkout Success Page
 
 <br>
 
-### _Bugs_
+### _Bugs_ _Bugs_ _Bugs_
 
-Shopping Cart page
+**Shopping Cart page**
 
 - The position of Update link was not aligned properly, I manage to fix it, but between 576px - 767px, and 1200px - 1256px the buttons for Update and Delete are not aligned correctly.
 <details><summary>example is here</summary>
@@ -201,18 +201,33 @@ Shopping Cart page
 
 - Update button didn't work for some reason, and with the help of amazing tutor from CI, we found out that was the extra div I had between the form and a tag was causing the issue. Removed that div and it worked like a charm.
 
-- The error message was displaying on the checkout page below the payment section, this was also solved with the help from CI's tutor.
+- On desktop view, when there is only on item, the image is squshed on the deployed version, but look good on the dev version, which is very confusing. After hours of trying different things, I went to CI's tutor support for help. And Ed manage to find a solution which worked on the first try, that's amazing.
+<details><summary>example is here</summary>
+<img src="static/testing/bug-shopping-cart-one-item.jpg" width="800">
+</details>
 
-- On the jewelry detail page, I have the logic in place for if there is inventory, it shows options for choosing the quantity the add to cart button, otherwise it only show "Sold out" and the continue shopping button. However, everything was showing sold out even there is inventory. After talking to Ci's Tutor - Josh, the problem didn't get fixed, but he helped me to find where the problem was. And I managed to fix it myself. Then after deployment, everything were showing sold out again, after long hours of investigation, I realised that inventory wasn't in the admin, therefore django couldn't find it, it was doing what my code told it to do. So I added the inventory to admin.py, increased the inventory and now the logic works. What I learnt is how to determine where to look for when there is an error. Josh showed me just that. I am really grateful.
+<br>
+
+**Checkout Page**
+
+- The error message was not displaying below the payment section, this was also solved with the help from CI's tutor.
+
+Jewelry Detail Page
+
+- I have the logic in place for if there is inventory, it shows options for choosing the quantity the add to cart button, otherwise it only show "Sold out" and the continue shopping button. However, everything was showing sold out even there is inventory. After talking to Ci's Tutor - Josh, the problem didn't get fixed, but he helped me to find where the problem was. And I managed to fix it myself. Then after deployment, everything were showing sold out again, after long hours of investigation, I realised that inventory wasn't in the admin, therefore django couldn't find it, it was doing what my code told it to do. So I added the inventory to admin.py, increased the inventory and now the logic works. What I learnt is how to determine where to look for when there is an error. Josh showed me just that. I am really grateful.
+
+**Footer**
 
 - Footer was floating on logout page, login page, register page and my profile page. I manage to find the problem and fixed it.
 <details><summary>example</summary>
 <img src="static/testing/bug-footer-floating.jpg" width="800">
 </details>
 
-- After fixed the issue with floating footer, I discovered the another issue, the footer is covering the buttons on product management page. After search on stackoverflow, I found the solution, now it is sitting at its designated place.
+- After fixed the issue with floating footer, I discovered the another issue, the footer is covering the buttons on product management page. After search on stackoverflow, I found the solution by adding to the css code clear: both; and increase the margin-bottom to the div above footer, now it is sitting at its designated place.
 <details><summary>example</summary>
 <img src="static/testing/bug-prod-mgt-btn-hidden.jpg" width="800">
 </details>
 
-- Above just few examples, I can't remember how many things went wrong and some I tried and fixed successfully, a quick search on slack is always helpful. Some I needed help from the tutors.
+<br>
+
+Above just few examples, I can't remember how many things went wrong and some I tried and fixed successfully, a quick search on slack is always helpful. Some I needed help from the tutors. I am so grateful for CI's Tutor's support!!!!
