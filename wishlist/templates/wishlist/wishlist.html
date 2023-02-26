@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% load bag_tools %}
 
 
 {% block page_header %}
@@ -13,114 +12,61 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container text-black">
+<div class="container-fluid">
     <div class="row">
-        <div class="col d-flex flex-column align-items-center">
-            <h2 class="logo-font">Wishlist</h2>
+        <div class="col d-flex flex-column align-items-center text-black">
+            <h2 class="logo-font">my wishlist</h2>
             <hr class="w-50">
         </div>
     </div>
 
-    <div class="row">
-        <div class="col d-flex flex-column cart-box align-items-center">
+    <div class="row justify-content-center">
+        <div class="col-sm-8 text-center">
             {% if wishlist_items %}
-            <!--
-                if wishlist has items, detailed info will be shown below,
-                including product image, title, price, in stock or not
-            -->
-            <div class="row w-100">
-                {% for item in wishlist_items %}
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                    <div class="card h-70 border-0">
-                        <div class="card-body p-1">
-                            <div class="image-container mt-2">
-                                {% if item.jewelry.image %}
-                                <img class="img-fluid rounded" src="{{ item.jewelry.image.url }}"
-                                    alt="{{ item.product.name }}">
-                                {% else %}
-                                <img class="img-fluid rounded" src="{{ MEDIA_URL }}no-image.png"
-                                    alt="{{ item.product.name }}">
-                                {% endif %}
-                            </div>
-                            <p class="card-title text-black text-center my-2"><strong>{{ item.jewelry.name }}</strong>
-                            </p>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <p class="my-1 text-muted small">
-                                            <strong>In Stock
-                                            </strong>{% if item.jewelry.inventory %}{{ item.inventory }}{% else %}Sold
-                                            Out{% endif %}
-                                        </p>
-                                        <p class="my-0">€{{ item.jewelry.price }}</p>
-                                    </div>
-                                    <div class="col-6">
-                                        <form method="POST" class="form update-form my-1"
-                                            action="{% url 'modify_cart' item.item_id %}">
-                                            {% csrf_token %}
-                                            <div class="input-group input-group-{{ item.item_id }}">
-                                                <button
-                                                    class="decrement-btn input-group-text btn btn-outline-info btn-sm rounded-1 decrement-btn_{{ item.item_id }}"
-                                                    data-item_id="{{ item.item_id }}" type="button">
-                                                    <span><i class="fa-solid fa-minus fa-sm"></i></span>
-                                                </button>
-                                                <input
-                                                    class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}"
-                                                    type="number" name="quantity" value="{{ item.quantity }}" min="1"
-                                                    max="50" data-item_id="{{ item.item_id }}">
-                                                <button
-                                                    class="increment-btn input-group-text btn btn-outline-info btn-sm rounded-1 increment-btn_{{ item.item_id }}"
-                                                    data-item_id="{{ item.item_id }}" type="button">
-                                                    <span><i class="fa-solid fa-plus fa-sm"></i></span>
-                                                </button>
-                                            </div>
-                                        </form>
-                                        <a class="update-link text-info text-decoration-none me-3">
-                                            <small>Update</small>
-                                        </a>
-                                        <a class="delete-link text-danger text-decoration-none ms-1 float-end"
-                                            id="delete_{{ item.item_id }}"><small>Delete</small></a>
-                                    </div>
+            <div class="table-responsive mb-5">
+                <table class="table table-borderless table-striped w-100">
+                    <thead>
+                        <tr class="border-bottom">
+                            <th>Jewelry</th>
+                            <th>Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for jewelry in wishlist_items %}
+                        <tr class="border-top">
+                            <td>
+                                <p class="m-0"> {{ jewelry.name }}</p>
+                                <div class="small wishlist-img">
+                                    {% if jewelry.image %}
+                                    <a href="{{ jewelry.image.url }}" target="_blank">
+                                        <img src="{{ jewelry.image.url }}" alt="{{ jewelry.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="">
+                                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ jewelry.name }}">
+                                    </a>
+                                    {% endif %}
                                 </div>
-                            </div>
-                        </div>
-                        <hr class="border-warning">
-                    </div>
-                </div>
-                {% endfor %}
+                            </td>
+                            <td>
+                                €{{ jewelry.sort_price }}
+                            </td>
+                            <td>
+                                <div class="btn logo-font p-0">
+                                    <a href="{% url 'remove_from_wishlist' jewelry.id %}"
+                                        class="btn bg-danger text-light">Remove</a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <p class="text-black">Your Wishlist is Empty</p>
+                {% endif %}
             </div>
-            {% endif %}
         </div>
     </div>
 </div>
-{% endblock %}
-
-{% block postloadjs %}
-{{ block.super }}
-{% include 'jewelries/includes/quantity_input_script.html' %}
-
-<script>
-    // on click update quantity
-    $('.update-link').click(function (e) {
-        var form = $(this).prev('.update-form');
-        console.log(form);
-        form.submit();
-    })
-
-    // on click delete item and reload
-    $('.delete-link').click(function (e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('delete_')[1];
-        var url = `/shopping_cart/delete/${itemId}/`;
-        var data = {
-            'csrfmiddlewaretoken': csrfToken,
-        };
-
-        $.post(url, data)
-            .done(function () {
-                location.reload();
-            });
-    })
-</script>
-
 {% endblock %}

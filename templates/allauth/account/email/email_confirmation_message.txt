@@ -2,7 +2,7 @@
 
 Congratulations on joining us!
 
-Please click on below link to confirmation your email and complate the account registration with us.
+Please click on below link to confirmation your email and complete the account registration with us.
 
 Registered Username: {{ user_display }}
 
