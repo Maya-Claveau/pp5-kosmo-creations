@@ -126,7 +126,7 @@ The tasks users can perform depends on their role. On this site, there are admin
 
 Below is the Database structure that this project is based on. There are User, Product, Product-inventory, Order, Review, Wishlist, and shopping cart buy later, you can also see their lationships between each table.
 
-<details><summary>Font and Color palette</summary>
+<details><summary>Database Schema</summary>
 <img src="static/readme/database-schema-v6.jpg"></details>
 
 <br>
