@@ -27,6 +27,7 @@ urlpatterns = [
     path('shopping_cart/', include('shopping_cart.urls')),
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
+    path('wishlist/', include('wishlist.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'kosmo_creations.views.handler404'

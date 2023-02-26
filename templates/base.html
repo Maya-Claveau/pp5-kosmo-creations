@@ -122,6 +122,16 @@
                             {% endif %}
                         </ul>
                     </li>
+                    <li class="list-inline-item">
+                        <a href="{% url 'view_wishlist' %}" class="text-black nav-link user-options">
+                            <div class="text-center pe-2">
+                                <div><i class="fa-solid fa-heart"></i></div>
+                                <span class="my-0">
+                                    Wishlist
+                                </span>
+                            </div>
+                        </a>
+                    </li>
                     <!-- display shopping bag icon, if there is items in it, grand total will be displayed as well  -->
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
