@@ -1,10 +1,10 @@
 from django.contrib import admin
-from . models import Wishlist
+from . models import WishlistItem
 
 
-@admin.register(Wishlist)
+@admin.register(WishlistItem)
 class WishlistAdmin(admin.ModelAdmin):
     """wishlist admin"""
-    model = Wishlist
+    model = WishlistItem
     fields = ('user', 'jewelry', 'created_at')
     list_display = ('pk', 'user', 'jewelry', 'created_at')

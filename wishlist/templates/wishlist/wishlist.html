@@ -23,49 +23,34 @@
     <div class="row justify-content-center">
         <div class="col-sm-8 text-center">
             {% if wishlist_items %}
-            <div class="table-responsive mb-5">
-                <table class="table table-borderless table-striped w-100">
-                    <thead>
-                        <tr class="border-bottom">
-                            <th>Jewelry</th>
-                            <th>Price</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for jewelry in wishlist_items %}
-                        <tr class="border-top">
-                            <td>
-                                <p class="m-0"> {{ jewelry.name }}</p>
-                                <div class="small wishlist-img">
-                                    {% if jewelry.image %}
-                                    <a href="{{ jewelry.image.url }}" target="_blank">
-                                        <img src="{{ jewelry.image.url }}" alt="{{ jewelry.name }}">
-                                    </a>
-                                    {% else %}
-                                    <a href="">
-                                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ jewelry.name }}">
-                                    </a>
-                                    {% endif %}
-                                </div>
-                            </td>
-                            <td>
-                                €{{ jewelry.sort_price }}
-                            </td>
-                            <td>
-                                <div class="btn logo-font p-0">
-                                    <a href="{% url 'remove_from_wishlist' jewelry.id %}"
-                                        class="btn bg-danger text-light">Remove</a>
-                                </div>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-                {% else %}
-                <p class="text-black">Your Wishlist is Empty</p>
-                {% endif %}
+            <div class="mb-5">
+                <ul>
+                    {% for item in items %}
+                    <li>
+                        <a href="{{ item.jewelry_url }}" target="_blank">{{ item.jewelry_name }}</a>
+                        - {{ item.jewelry_description }}
+                        <a href="{% url 'remove_from_wishlist' item.id %}">Remove</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <label for="jewelry_name">Jewelry name:</label>
+                    <input type="text" name="jewelry_name" required>
+                    <br>
+                    <label for="jewelry_description">Jewelry description:</label>
+                    <textarea name="jewelry_description" required></textarea>
+                    <br>
+                    <label for="jewelry_url">Jewelry URL:</label>
+                    <input type="url" name="jewelry_url" required>
+                    <br>
+                    <input type="submit" value="Add to wishlist">
+                </form>
             </div>
+            {% else %}
+            <p class="text-black">Your Wishlist is Empty</p>
+            {% endif %}
         </div>
     </div>
 </div>

@@ -4,7 +4,7 @@ from jewelries.models import Jewelry
 from profiles.models import UserProfile
 
 
-class Wishlist(models.Model):
+class WishlistItem(models.Model):
     """ Wishlist model to store users favourite jewelries """
     user = models.ForeignKey(
         UserProfile, on_delete=models.CASCADE,
