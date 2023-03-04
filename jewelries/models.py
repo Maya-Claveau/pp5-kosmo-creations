@@ -34,6 +34,7 @@ class Jewelry(models.Model):
         )
     image = models.ImageField(null=True, blank=True)
     inventory = models.IntegerField(default=0)
+    # wishlist = models.ManytoManyField
 
     def __str__(self):
         return self.name

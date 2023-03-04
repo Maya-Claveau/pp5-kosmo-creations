@@ -3,7 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.wishlist, name='wishlist'),
+    path('', views.wishlistView, name='wishlist'),
     path(
         'add_to_wishlist/<int:jewelry_id>/',
         views.add_to_wishlist,

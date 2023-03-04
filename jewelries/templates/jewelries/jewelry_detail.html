@@ -31,15 +31,14 @@
             <div class="jewelry-details-container mb-5 mt-md-5 text-black">
                 <h4 class="mb-0">{{ jewelry.name }}</h4>
                 {% if request.user.is_authenticated %}
-                <a href="{% url 'add_to_wishlist' jewelry.id %}" class="text-decoration-none">
-                    {% if jewelry in wishlist_items %}
-                    <small class="text-muted" style="background-color:goldenrod;">remove from wishlist</small>
-                    {% else %}
-                    <small class="text-muted">Add to Wishlist <i class="fa-solid fa-heart"></i></small>
-                    {% endif %}
-                </a>
-                {% else %}
-                <small class="text-muted">Add to Wishlist <i class="fa-solid fa-heart"></i></small>
+                <form action="{% url 'wishlist' %}">
+                    {%csrf_token%}
+                    <input type="hidden" name="jewelry-id" value="{{ jewelry.id }}">
+                    <input type="submit" class="btn-outline-info" value="Add To Wishlist">
+                    <!-- <a href="{% url 'add_to_wishlist' jewelry.id %}" class="text-decoration-none">
+                        <small class="text-muted">Add to Wishlist <i class="fa-solid fa-heart"></i></small>
+                    </a> -->
+                </form>
                 {% endif %}
                 {% if request.user.is_superuser %}
                 <div class="d-flex justify-content-end">

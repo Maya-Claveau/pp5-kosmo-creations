@@ -22,36 +22,40 @@
 
     <div class="row justify-content-center">
         <div class="col-sm-8 text-center">
-            {% if wishlist_items %}
-            <div class="mb-5">
-                <ul>
-                    {% for item in items %}
-                    <li>
-                        <a href="{{ item.jewelry_url }}" target="_blank">{{ item.jewelry_name }}</a>
-                        - {{ item.jewelry_description }}
-                        <a href="{% url 'remove_from_wishlist' item.id %}">Remove</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-
-                <form method="post">
-                    {% csrf_token %}
-                    <label for="jewelry_name">Jewelry name:</label>
-                    <input type="text" name="jewelry_name" required>
-                    <br>
-                    <label for="jewelry_description">Jewelry description:</label>
-                    <textarea name="jewelry_description" required></textarea>
-                    <br>
-                    <label for="jewelry_url">Jewelry URL:</label>
-                    <input type="url" name="jewelry_url" required>
-                    <br>
-                    <input type="submit" value="Add to wishlist">
-                </form>
+            {% for item in wish_items %}
+            <div class="wishlist-card col-md-12 mt-3">
+                <div class="row">
+                    <div class="col-md-2 wish-img-section">
+                        {% if item.jewelry.image %}
+                        <img src="{{ item.jewelry.image.url }}" alt="{{ jewelry.name }}" class="w-100">
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}no-image.png" alt="{{ jewelry.name }}" class="w-100">
+                        {% endif %}
+                    </div>
+                    <div class="col-md-10 wish-jewelry-section">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p class="text-black">{{ item.jewelry.name }}</p>
+                                <p class="text-black">€{{ item.jewelry.price }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="{% url 'jewelries' %}"
+                            class="btn btn-outline-info btn-buy-now rounded-1 mt-3 mt-md-5 me-md-3">
+                            <span class="icon">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Continue Shopping</span>
+                        </a>
+                        <input type="submit" class="btn btn-info rounded-1 btn-buy-now text-uppercase mt-sm-3 mt-md-5"
+                            value="Add to cart">
+                    </div>
+                </div>
             </div>
-            {% else %}
-            <p class="text-black">Your Wishlist is Empty</p>
-            {% endif %}
+            {% endfor %}
         </div>
     </div>
+</div>
 </div>
 {% endblock %}

@@ -1,4 +1,5 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
+from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from jewelries.models import Jewelry
@@ -7,23 +8,14 @@ from .models import WishlistItem
 
 
 @login_required
-def wishlist(request):
+class wishlistView(generic.View):
     """ display the wishlist page """
-    if request.method == 'POST':
-        jewelry_name = request.POST.get('jewelry.jewelry_name')
-        jewelry_description = request.POST.get('jewelry.jewelry_description')
-        jewelry_url = request.POST.get('jewelry_url')
-        WishlistItem.objects.create(
-            user=request.user,
-            jewelry_name=Jewelry.jewelry_name,
-            jewelry_description=Jewelry.jewelry_description,
-            jewelry_url=Jewelry.jewelry_url
-            )
-        return redirect('wishlist')
-
-    items = WishlistItem.objects.filter(user=request.user)
-    template = 'wishlist/wishlist.html'
-    return render(request, template, {'items': items})
+    def get(self, *args, **kwargs):
+        wish_items = WishlistItem.objects.filter(user=self.request.user)
+        context = {
+            'wish_items': wish_items
+        }
+        return render(self.request, 'wishlist/wishlist.html', context)
 
 
 @login_required
@@ -42,7 +34,7 @@ def add_to_wishlist(request, jewelry_id):
         )
         wishlist_item.delete()
         messages.info(request, f'{wishlist_item} already in your wishlist!')
-        return redirect(reverse('jewelry_detail', args=[jewelry.id]))
+        return redirect('wishlist')
     else:
         wishlist_item = WishlistItem.objects.create(
             user=user,
