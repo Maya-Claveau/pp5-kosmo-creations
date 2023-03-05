@@ -11,7 +11,11 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your email has been sent!')
+            messages.success(
+                request,
+                'Your message has been sent! \
+                    We will get back to you within 24hours.')
+            return redirect('home')
         else:
             messages.error(
                 request,
