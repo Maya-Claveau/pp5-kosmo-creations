@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- Overlay -->
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center text-black d-flex flex-column align-items-center">
+            <h2 class="logo-font">contact us</h2>
+            <hr class="w-50">
+        </div>
+    </div>
+</div>
+<div>
+    <div class="container footer-padding">
+        <div class="row text-black mt-1">
+            <!-- Contact form -->
+            <br>
+            <div class="col-sm-7 contact-form">
+                <h3 class="mb-2">How can we help? Leave your message here</h3>
+                <div class="row">
+                    <div class="col">
+                        <form action="{% url 'contact' %}" method="POST" id="contact-form">
+                            {% csrf_token %}
+                            {% for field in form %}
+                            {{ field | as_crispy_field}}
+                            {% endfor %}
+                            <input type="submit" value="Submit" class="btn btn-info text-black" aria-label="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- our location -->
+            <div class="col-sm-5 text-center">
+                <h3 class="mb-2">Our Location</h3>
+                <br>
+                <p><i class="fas fa-map-marker-alt"></i><br>
+                    Yiannou Kranidioti 87
+                    <br>
+                    Office 101,
+                    <br>
+                    Nicosia, Cyprus
+                </p>
+                <!-- phone -->
+                <p><i class="fas fa-phone"></i><br>
+                    +357 99168710
+                </p>
+                <!-- facbook link -->
+                <div>
+                    <a href="https://www.facebook.com/kosmocreationshandmadejewellery" target="_blank"
+                        class="text-decoration-none text-info"> Follow us on
+                        Facebook! <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
