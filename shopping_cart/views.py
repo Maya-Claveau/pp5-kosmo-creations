@@ -38,7 +38,9 @@ def add_to_cart(request, item_id):
 
 
 def modify_cart(request, item_id):
-    """ modify the quantity of the specified product in the shopping cart """
+    """
+    modify the quantity of the specified product in the shopping cart
+    """
 
     jewelry = get_object_or_404(Jewelry, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -52,7 +54,10 @@ def modify_cart(request, item_id):
             )
     else:
         shopping_cart.pop(item_id)
-        messages.success(request, f'Removed {jewelry.name} from you shopping cart')  # noqa
+        messages.success(
+            request,
+            f'Removed {jewelry.name} from you shopping cart'
+            )
 
     request.session['shopping_cart'] = shopping_cart
     return redirect(reverse('view_shopping_cart'))

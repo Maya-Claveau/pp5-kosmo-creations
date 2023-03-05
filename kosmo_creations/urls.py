@@ -31,4 +31,6 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+handler400 = 'kosmo_creations.views.handler400'
 handler404 = 'kosmo_creations.views.handler404'
+handler500 = 'kosmo_creations.views.handler500'
