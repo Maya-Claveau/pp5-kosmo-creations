@@ -1,5 +1,4 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
-from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from jewelries.models import Jewelry
@@ -8,14 +7,13 @@ from .models import WishlistItem
 
 
 @login_required
-class wishlistView(generic.View):
+def wishlist_view(request):
     """ display the wishlist page """
-    def get(self, *args, **kwargs):
-        wish_items = WishlistItem.objects.filter(user=self.request.user)
-        context = {
-            'wish_items': wish_items
-        }
-        return render(self.request, 'wishlist/wishlist.html', context)
+    wish_items = WishlistItem.objects.filter(user=request.user)
+    context = {
+        'wishlist': wish_items
+    }
+    return render(request, 'wishlist/wishlist.html', context)
 
 
 @login_required
