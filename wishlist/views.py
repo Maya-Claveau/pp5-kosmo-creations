@@ -9,45 +9,42 @@ from .models import WishlistItem
 @login_required
 def wishlist_view(request):
     """ display the wishlist page """
-    wish_items = WishlistItem.objects.filter(user=request.user)
+    user = get_object_or_404(UserProfile, user=request.user)
+    wishlist = WishlistItem.objects.filter(user=user)
+    template = 'wishlist/wishlist.html'
     context = {
-        'wishlist': wish_items
+        'wishlist': wishlist,
     }
-    return render(request, 'wishlist/wishlist.html', context)
+
+    return render(request, template, context)
 
 
 @login_required
 def add_to_wishlist(request, jewelry_id):
     """ add a jewelry to the wishlist"""
-    user = UserProfile.objects.get(user=request.user)
-    jewelry = get_object_or_404(Jewelry, id=jewelry_id)
-    wishlist_exists = WishlistItem.objects.filter(
-        user=user, jewelry=jewelry
-        ).exists()
+    user = get_object_or_404(UserProfile, user=request.user)
+    jewelry = get_object_or_404(Jewelry, pk=jewelry_id)
 
-    if wishlist_exists:
-        wishlist_item = WishlistItem.objects.get(
-            user=user,
-            jewelry=jewelry
-        )
-        wishlist_item.delete()
-        messages.info(request, f'{wishlist_item} already in your wishlist!')
-        return redirect('wishlist')
-    else:
-        wishlist_item = WishlistItem.objects.create(
-            user=user,
-            jewelry=jewelry
-        )
-        messages.success(
-            request, f'Successfully added {wishlist_item} to your wishlist!')
-        return redirect('wishlist')
+    WishlistItem.objects.create(
+        user=user,
+        jewelry=jewelry
+    )
+    messages.success(
+        request, f'{jewelry.name} has been added to your Wishlist!')
+
+    return redirect(reverse('jewelry_detail', args=[jewelry.id]))
 
 
 @login_required
-def remove_from_wishlist(request, jewelry_id):
-    """ remove from the wishlist"""
-    item = WishlistItem.objects.get(id=jewelry_id)
-    if item.user == request.user:
-        item.delete()
-        messages.success(request, f'Successfully removed {jewelry.name}')
-    return redirect('wishlist')
+def remove_from_wishlist(request, item_id):
+    """ remove jewelry from the wishlist"""
+    user = get_object_or_404(UserProfile, user=request.user)
+    # get the item from the wishlist to be removed
+    item = get_object_or_404(Jewelry, pk=item_id)
+    # check if the reuquested user owns the item to be removed
+    WishlistItem.objects.filter(user=user, jewelry=item).delete()
+    messages.success(
+            request,
+            f'Successfully removed {item.name} from your wishlist!'
+            )
+    return redirect(reverse('jewelry_detail', args=[item.id]))

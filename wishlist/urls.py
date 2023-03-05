@@ -10,7 +10,7 @@ urlpatterns = [
         name="add_to_wishlist"
     ),
     path(
-        'remove_from_wishlist/<int:jewelry_id>/',
+        'remove_from_wishlist/<int:item_id>/',
         views.remove_from_wishlist,
         name="remove_from_wishlist"
     ),

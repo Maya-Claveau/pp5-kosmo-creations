@@ -21,6 +21,7 @@
     </div>
 
     <div class="row justify-content-center">
+        {% if wishlist %}
         {% for item in wishlist %}
         <div class="col-sm-6 col-md-4 col-lg-3 my-2">
             <div class="card h-70 border-0">
@@ -40,8 +41,8 @@
                                 <p class="my-0">Price: €{{ item.jewelry.price }}</p>
                             </div>
                             <div class="col-6">
-                                <a class="delete-link text-danger text-decoration-none ms-1 float-end"
-                                    id="delete_{{ item.item_id }}"><small>Delete</small></a>
+                                <a class="text-danger text-decoration-none ms-1 float-end"
+                                    href="{% url 'remove_from_wishlist' item.jewelry.id %}"><small>Remove</small></a>
                             </div>
                         </div>
                     </div>
@@ -50,6 +51,14 @@
             </div>
         </div>
         {% endfor %}
+        {% else %}
+        <p class="text-black mt-2 text-center">Looks like your Wishlist is empty!</p>
+        <h4 class="text-center">
+            <a href="{% url 'jewelries' %}" class="btn btn-info rounded-1 text-uppercase py-1">explore
+                the collection
+            </a>
+        </h4>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
