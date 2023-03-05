@@ -22,14 +22,14 @@
 </div>
 <div>
     <div class="container footer-padding">
-        <div class="row text-black mt-1">
+        <div class="row text-black">
             <!-- Contact form -->
             <br>
-            <div class="col-sm-7 contact-form">
+            <div class="col-sm-7 contact-form my-1">
                 <h3 class="mb-2">How can we help? Leave your message here</h3>
                 <div class="row">
                     <div class="col">
-                        <form action="{% url 'contact' %}" method="POST" id="contact-form">
+                        <form action="{% url 'contact' %}" method="POST">
                             {% csrf_token %}
                             {% for field in form %}
                             {{ field | as_crispy_field}}
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <!-- our location -->
-            <div class="col-sm-5 text-center">
+            <div class="col-sm-5 text-center mt-3 mb-3">
                 <h3 class="mb-2">Our Location</h3>
                 <br>
                 <p><i class="fas fa-map-marker-alt"></i><br>
