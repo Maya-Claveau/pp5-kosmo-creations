@@ -346,7 +346,7 @@ Main Tech used are:
 
 ## **Acknowledgments**
 
-- Amazing Tutors from Code Institute, they not only helped me to fix the problems, also guide me and provide more information to learn from it. I also learnt how they debug and the thinking process where to look and how to find the problem in the first place.
+- Amazing Tutors from Code Institute, they not only helped me to fix the problems, also guide me and provide more information to learn from it. I also learnt how they debug and the thinking process where to look and how to find the problem in the first place. Special shout out to Joshua from the Tutor's team, I lost count on how many times he helped/guided me to figure out where to look and what could be causing the problem. I really couldn't have done it without his support.
 
 - My mentor who is supporting me all the way and giving me more ideas and challenges
 
@@ -355,5 +355,3 @@ Main Tech used are:
 - CI's Slack community for keeping me sane and knowing I am not alone in this.
 
 THANK YOU ALL!!!
-
-<small>\*Note: The current version does not contain all the features I have planned for this project, juggling between new job - family commitment - project with deadlines are overwhelming to say the least. Given the time I could spend, I did try my best.</small>
