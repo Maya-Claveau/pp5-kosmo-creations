@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import NewsletterSubscriber, Newsletter
+from .models import Subscription, Newsletter
 
 
-class SubscriberAdmin(admin.ModelAdmin):
-    """ display NewsletterSubscriber model in Admin """
+class SubscriptionAdmin(admin.ModelAdmin):
+    """ display Subscription model in Admin """
     list_display = (
         'email', 'date_added'
     )
@@ -21,5 +21,5 @@ class NewsletterAdmin(admin.ModelAdmin):
     search_fields = ('title', 'message')
 
 
-admin.site.register(NewsletterSubscriber, SubscriberAdmin)
+admin.site.register(Subscription, SubscriptionAdmin)
 admin.site.register(Newsletter, NewsletterAdmin)

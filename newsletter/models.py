@@ -1,9 +1,9 @@
 from django.db import models
 
 
-class NewsletterSubscriber(models.Model):
+class Subscription(models.Model):
     """
-    store subscriber's email
+    newsletter subscription
     """
     email = models.EmailField(
         max_length=254, blank=False, null=False
@@ -19,7 +19,7 @@ class Newsletter(models.Model):
         ('Draft', 'Draft'),
         ('Published', 'Published')
     )
-    email = models.ManyToManyField(NewsletterSubscriber)
+    email = models.ManyToManyField(Subscription)
     subject = models.CharField(max_length=250)
     body = models.TextField()
     status = models.CharField(max_length=10, choices=EMAIL_STATUS_CHOICE)
