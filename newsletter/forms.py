@@ -4,16 +4,18 @@ from .models import Subscription, Newsletter
 
 class NewsletterForm(forms.ModelForm):
     """ newsletter form"""
-    email = forms.EmailField(label='')
-
     class Meta:
         """ newsletter form"""
         model = Subscription
-        fields = ('email',)
+        fields = ['email']
 
     def clean_email(self, *args, **kwargs):
+        """ clean email """
         email = self.cleaned_data.get("email")
         subscriber = Subscription.objects.filter(email__iexact=email)
         if subscriber.exists():
-            raise forms.ValidationError("This email already subscribed!")
+            raise forms.ValidationError(
+                "This email already subscribed!"
+                "Please make sure you have entered the correct email address!"
+                )
         return email

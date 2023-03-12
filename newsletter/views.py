@@ -14,4 +14,3 @@ def newsletter_view(request):
         'all_subscribers': all_subscribers,
     }
     return render(request, 'newsletter/newsletter.html', context)
-
