@@ -28,7 +28,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 
-
 ALLOWED_HOSTS = ['kosmo-creations.herokuapp.com', 'localhost']
 
 
