@@ -1,6 +1,6 @@
 # Welcome to **[Kosmo Creations](https://kosmo-creations.herokuapp.com/)**
 
-<img src="static/readme/mockup.jpg" width="800">
+<img src="static/readme/mockup02.jpg" width="800">
 
 The 5th portfolio project for Code Institute. It is a E-commerce web application, click [here](https://kosmo-creations.herokuapp.com/) to have a look.
 
@@ -84,7 +84,8 @@ It is a B2C business model, with targeted customer being individuals, and focus 
 #### _Subscribe to Newsletter_
 
 Customer has the possibility to subscribe to the newsletter to keep informed about latest design, special events. [Mailchimp](https://mailchimp.com/) service was used for this purposes in v0.1.
-In v0.2 there was a change has been made regarding newsletter approach. MailChimp was removed, instead I made an newsletter page that any users can view it. In the future, there will be possibility to subscribe and unsubscribe to our newsletter.
+
+In v0.2 there was a change has been made regarding newsletter approach. MailChimp was removed, instead I made an newsletter page that any users can view it. In the future, there will be possibile to subscribe and unsubscribe to our newsletter.
 
 #### _SEO_
 
@@ -204,7 +205,10 @@ I chose Barlow because it looks elegant and easy to read for the users, and a mi
 
 ---
 
-## **Deployment Site - version 1.0**
+## **Deployed Site - version 1.0**
+
+<details><summary>v0.1 Mockup</summary>
+<img src="static/readme/mockup.jpg" width="800"></details>
 
 ### **_Landing Page:_**
 
@@ -312,7 +316,37 @@ For admin uers only, when they login, under the Account, there is an extra link 
 <img src="static/readme/product-mgt-pg.jpg" width="800">
 </details>
 
----
+<br>
+
+## **Deployed Site - version 2.0**
+
+In this new version, 3 new features were added, details are shown below:
+
+### **_Contact form_**
+
+<details><summary>Anyone can access it</summary>
+<img src="static/readme/contact-page.jpg" width="800">
+</details>
+
+<br>
+
+### **_Newsletter page_**
+
+<details><summary>Anyone can access it</summary>
+<img src="static/readme/newsletter-page.jpg" width="800">
+</details>
+
+<br>
+
+### **_Wishlist_**
+
+<details><summary>Logged in user and Admin can access it</summary>
+<img src="static/readme/wishlist-page.jpg" width="800">
+</details>
+
+Not logged in user will see the login page instead
+
+<br>
 
 ## **Testing**
 
@@ -334,7 +368,6 @@ Main Tech used are:
 - **CSS**
 - **Javascript**
 - **postgresql**
-- **psycopg2**
 
 ### **Tools**
 
