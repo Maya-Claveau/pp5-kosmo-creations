@@ -83,7 +83,8 @@ It is a B2C business model, with targeted customer being individuals, and focus 
 
 #### _Subscribe to Newsletter_
 
-Customer has the possibility to subscribe to the newsletter to keep informed about latest design, special events. [Mailchimp](https://mailchimp.com/) service was used for this purposes.
+Customer has the possibility to subscribe to the newsletter to keep informed about latest design, special events. [Mailchimp](https://mailchimp.com/) service was used for this purposes in v0.1.
+In v0.2 there was a change has been made regarding newsletter approach. MailChimp was removed, instead I made an newsletter page that any users can view it. In the future, there will be possibility to subscribe and unsubscribe to our newsletter.
 
 #### _SEO_
 
@@ -140,11 +141,12 @@ The tasks users can perform depends on their role. On this site, there are admin
 | 22  |              [As an admin I can edit a product](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/22)              |    Done |
 | 23  |             [As an admin I can delete a product](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/23)             |    Done |
 | 24  |              [View the inventory of a product](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/24)               | Backlog |
-| 25  |                    [View my own wishlist](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/25)                    | Backlog |
-| 26  |               [Write a review after purchase](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/26)                | Backlog |
+| 25  |                    [View my own wishlist](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/25)                    |    Done |
+| 26  |                        [contact form](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/26)                        |    Done |
 | 27  |                   [View shopping history](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/27)                    |    Done |
 | 28  |    [View the products in the shopping bag for buy later](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/28)     | Backlog |
 | 29  |      [Provide visual feedback after operation by users](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/29)      |    Done |
+| 30  |                      [view newsletter](https://github.com/Maya-Claveau/pp5-kosmo-creations/issues/30)                       |    Done |
 
 <details>
 <summary>Logic</summary>
