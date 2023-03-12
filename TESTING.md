@@ -40,6 +40,12 @@ There is a warning here, since the empty heading element was left empty on purpo
 There are two errors on this page, however after investigation, both errors are coming from imported django file, due to the time pressure, I decided not to fix it. Details can be seen from below screenshot.
 <img src="static/testing/html-prod-mgt-pg.jpg">
 <img src="static/testing/html-prod-mgt-pg-error.jpg">
+<summary>Contact us Page</summary>
+<img src="static/testing/html-contact-pg.jpg">
+<summary>Newsletter Page</summary>
+<img src="static/testing/html-newsletter-pg.jpg">
+<summary>Wishlist Page</summary>
+<img src="static/testing/html-wishlist-pg.jpg">
 
 </details>
 
