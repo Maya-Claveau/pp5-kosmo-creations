@@ -270,6 +270,11 @@ Jewelry Detail Page
 
 <br>
 
+**Wishlist and Contact Page**
+Both were working fine in the development site, but not in deployed site for some reason. I did do migration after create these two apps, but I couldn't figure out what's causing the issue. After few hours of not going anywhere. I turned to Tutor support for rescue. Josh took my tickets, and get it solved in no time. Turns out that I am missing the link to ElephantSQL database. And thanks to Josh who helped me link my code directly to ElephantSQL for both development and deployed site.
+
+<br>
+
 ### Unsolved Bugs
 
 On the checkout page, when the logged in user check the box of save their information, the info doesn't get saved to their profile for some reason. But if the user update info in their profile, the change is reflected on the checkout page. Due to the time pressure, I didn't manage to find the cause, therefore I removed that bit, so it is not visible to the user, but the backend code are still in the project as I intend to fix it in the future.
