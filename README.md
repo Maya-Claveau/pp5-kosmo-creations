@@ -4,6 +4,37 @@
 
 The 5th portfolio project for Code Institute. It is a E-commerce web application, click [here](https://kosmo-creations.herokuapp.com/) to have a look.
 
+- [**Purpose of the site**](#purpose-of-the-site)
+- [**Why This**](#why-this)
+- [**Project planning**](#project-planning)
+  - [**Business Model**](#business-model)
+  - [**Web Marketing**](#web-marketing)
+    - [_Subscribe to Newsletter_](#subscribe-to-newsletter)
+    - [_SEO_](#seo)
+    - [_GDPR_](#gdpr)
+  - [**User Stories**](#user-stories)
+  - [**Database Structure**](#database-structure)
+  - [**WireFrames**](#wireframes)
+  - [**Font and color**](#font-and-color)
+  - [**Agile Methodology**](#agile-methodology)
+- [**Deployment Site - version 1.0**](#deployment-site-version-10)
+  - [**_Landing Page:_**](#landing-page)
+  - [**_Jewelries Page:_**](#jewelries-page)
+  - [**_Jewelry Detail Page:_**](#jewelry-detail-page)
+  - [**_Shopping Cart Page:_**](#shopping-cart-page)
+  - [**_Checkout Page_**](#checkout-page)
+  - [**_Order confirmation Page_**](#order-confirmation-page)
+  - [**_Profile Page_**](#profile-page)
+  - [**_Product Management Page_**](#product-management-page)
+- [**Testing**](#testing)
+- [**Tech Stack**](#tech-stack)
+  - [**Languages**](#languages)
+  - [**Tools**](#tools)
+- [**Credits**](#credits)
+- [**Acknowledgments**](#acknowledgments)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 ## **Purpose of the site**
 
 Site owner’s main objectives are:
