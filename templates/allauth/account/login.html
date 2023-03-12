@@ -40,7 +40,7 @@
       {% csrf_token %}
       {{ form|crispy }}
       {% if redirect_field_value %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
       {% endif %}
       <div class="text-center">
         <a href="{% url 'home' %}" class="btn btn-outline-info rounded-1">Home</a>
