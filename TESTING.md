@@ -242,7 +242,9 @@ Jewelry Detail Page
 
 ### Unsolved Bugs
 
-On the checkout page, when the logged in user check the box of save their information, the info doesn't get saved to their profile for some reason. But if the user update info in their profile, the change is reflected on the checkout page. Due to the time pressure, I didn't manage to find the cause, therefore I removed that bit, so it is not visible to the user, but the backend code are still in the project as I intend to fix it in the next sprint.
+On the checkout page, when the logged in user check the box of save their information, the info doesn't get saved to their profile for some reason. But if the user update info in their profile, the change is reflected on the checkout page. Due to the time pressure, I didn't manage to find the cause, therefore I removed that bit, so it is not visible to the user, but the backend code are still in the project as I intend to fix it in the future.
+
+On the Newsletter page, the two buttons at the bottom of Subcribe and Unsubcribe doesn't work yet, given the time I couldn't attend to this, but this is definitely something I would like to make it work.
 
 <br>
 
