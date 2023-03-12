@@ -12,8 +12,11 @@ from profiles.models import UserProfile
 # Create your models here.
 class Order(models.Model):
     """ model for order """
-    order_number = models.CharField(max_length=32, null=False, editable=False)  # noqa
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')  # noqa
+    order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_profile = models.ForeignKey(
+        UserProfile, on_delete=models.SET_NULL, null=True, blank=True,
+        related_name='orders'
+        )
     full_name = models.CharField(max_length=60)
     email = models.CharField(max_length=100)
     phone = models.CharField(max_length=25, blank=False, null=False)
@@ -25,11 +28,21 @@ class Order(models.Model):
     post_code = models.CharField(max_length=20)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)  # noqa
-    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)  # noqa
-    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)  # noqa
-    original_shopping_cart = models.TextField(null=False, blank=False, default='')  # noqa
-    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')  # noqa
+    order_total = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0
+        )
+    grand_total = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0
+        )
+    delivery_cost = models.DecimalField(
+        max_digits=6, decimal_places=2, null=False, default=0
+        )
+    original_shopping_cart = models.TextField(
+        null=False, blank=False, default=''
+        )
+    stripe_pid = models.CharField(
+        max_length=254, null=False, blank=False, default=''
+        )
 
     def __str__(self):
         return self.order_number
@@ -51,9 +64,12 @@ class Order(models.Model):
         Update grand total when an new item is added,
         calculate delivery costs.
         """
-        self.order_total = self.orderinlineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0  # noqa
+        self.order_total = self.orderinlineitems.aggregate(
+            Sum('lineitem_total')
+            )['lineitem_total__sum'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100  # noqa
+            s_delivery_p = settings.STANDARD_DELIVERY_PERCENTAGE
+            self.delivery_cost = self.order_total * s_delivery_p / 100
         else:
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
@@ -62,10 +78,17 @@ class Order(models.Model):
 
 class OrderItem(models.Model):
     """ model for each order with items in shopping cart """
-    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='orderinlineitems')  # noqa
-    jewelry = models.ForeignKey(Jewelry, null=False, blank=False, on_delete=models.CASCADE)  # noqa
+    order = models.ForeignKey(
+        Order, null=False, blank=False, on_delete=models.CASCADE,
+        related_name='orderinlineitems'
+        )
+    jewelry = models.ForeignKey(
+        Jewelry, null=False, blank=False, on_delete=models.CASCADE
+        )
     quantity = models.PositiveIntegerField(default=0)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)  # noqa
+    lineitem_total = models.DecimalField(
+        max_digits=6, decimal_places=2, null=False, blank=False, editable=False
+        )
 
     def __str__(self):
         return f'Order ID: {self.id} on order {self.order.order_number}'

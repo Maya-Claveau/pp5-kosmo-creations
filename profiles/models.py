@@ -16,7 +16,9 @@ class UserProfile(models.Model):
     default_address1 = models.CharField(max_length=150, blank=True, null=True)
     default_address2 = models.CharField(max_length=150, blank=True, null=True)
     default_city = models.CharField(max_length=80, blank=True, null=True)
-    default_county_province_state = models.CharField(max_length=90, blank=True, null=True)  # noqa
+    default_county_province_state = models.CharField(
+        max_length=90, blank=True, null=True
+        )
     default_post_code = models.CharField(max_length=20, null=True, blank=True)
     default_country = CountryField(blank_label='Country')
 

@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse  # noqa
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse
+)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -21,7 +23,9 @@ def cache_checkout_data(request):
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
-            'shopping_cart': json.dumps(request.session.get('shopping_cart', {})),  # noqa
+            'shopping_cart': json.dumps(
+                request.session.get('shopping_cart', {})
+                ),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
@@ -69,13 +73,15 @@ def checkout(request):
                     order_item.save()
                 except jewelry.DoesNotExist:
                     messages.error(request, (
-                        "One of the Jewelry in your shopping cart wasn't found."  # noqa
-                        " Please let us know and we will assist you!"
+                        "One of the Jewelry in your shopping cart wasn't "
+                        "found. Please let us know and we will assist you!"
                     ))
                     order.delete()
                     return redirect(reverse('view_shopping_cart'))
                 request.session['save_info'] = 'save_info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))  # noqa
+            return redirect(reverse(
+                'checkout_success', args=[order.order_number]
+                ))
         else:
             messages.error(request, 'Error detected in your form. \
                 Please make sure the information entered are correct.')
@@ -83,7 +89,8 @@ def checkout(request):
         shopping_cart = request.session.get('shopping_cart', {})
         if not shopping_cart:
             messages.error(
-                request, "There is nothing in your shopping cart at the moment."  # noqa
+                request, "There is nothing in your shopping cart"
+                " at the moment."
                 )
             return redirect(reverse('jewelries'))
 

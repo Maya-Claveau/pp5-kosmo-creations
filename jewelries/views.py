@@ -47,7 +47,9 @@ def all_jewelries(request):
                     )
                 return redirect(reverse('jewelries'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)  # noqa
+            queries = (
+                Q(name__icontains=query) | Q(description__icontains=query)
+                )
             jewelries = jewelries.filter(queries)
 
     requested_sorting = f'{sort}_{direction}'
@@ -88,7 +90,9 @@ def add_jewelry(request):
             messages.success(request, 'Jewelry added successfully!')
             return redirect(reverse('jewelry_detail', args=[jewelry.id]))
         else:
-            messages.error(request, 'Failed to add the jewelry. Please try again.')  # noqa
+            messages.error(
+                request, 'Failed to add the jewelry. Please try again.'
+                )
     else:
         form = JewelryForm()
 
@@ -116,7 +120,9 @@ def edit_jewelry(request, jewelry_id):
             return redirect(reverse('jewelry_detail', args=[jewelry.id]))
 
         else:
-            messages.error(request, 'Failed to update the jewelry. Please try again.')  # noqa
+            messages.error(
+                request, 'Failed to update the jewelry. Please try again.'
+                )
     else:
         form = JewelryForm(instance=jewelry)
         messages.info(request, f'You are editing {jewelry.name}')
