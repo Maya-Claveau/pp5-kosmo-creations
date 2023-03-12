@@ -3,7 +3,7 @@
     "model": "jewelries.jewelry",
     "fields": {
         "name": "Bordo Anklet",
-        "description": "Beautiful red and green crystals with golden details in between, a chain that can be adjusted in lengh for a better fit. Small green crytal at the end of chain. The real sea shell made this anklet really cute.",
+        "description": "Beautiful red and green crystals with golden details in between, a chain that can be adjusted in length for a better fit. Small green crystal at the end of chain. The real sea shell made this anklet really cute.",
         "price": 19.99,
         "category": 1,
         "rating": 4.7,
@@ -102,7 +102,7 @@
     "model": "jewelries.jewelry",
     "fields": {
         "name": "Beige Bracelet",
-        "description": "Made from crystals with natual stone look and golden details in between. Adjustable chain closure. Small jade crytal at the end makes it extra special.",
+        "description": "Made from crystals with natural stone look and golden details in between. Adjustable chain closure. Small jade crytal at the end makes it extra special.",
         "price": 23.99,
         "category": 2,
         "rating": 4.4,
@@ -201,7 +201,7 @@
     "model": "jewelries.jewelry",
     "fields": {
         "name": "Black n' Pearl Necklace",
-        "description": "Made from black crystals and natrual pearls with golden details in between. Adjustable chain closure and tiny red crytal at the end. This is perfect if you are looking for one of a kind classy look.",
+        "description": "Made from black crystals and natural pearls with golden details in between. Adjustable chain closure and tiny red crytal at the end. This is perfect if you are looking for one of a kind classy look.",
         "price": 36.88,
         "category": 3,
         "rating": 4.9,
