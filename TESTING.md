@@ -146,18 +146,6 @@ My Profile Page
 
 <br>
 
-My Profile Page
-
-<details><summary>Desktop</summary>
-<img src="static/testing/lh-desktop-profile.jpg" width="800">
-</details>
-
-<details><summary>Mobile</summary>
-<img src="static/testing/lh-mob-profile.jpg" width="800">
-</details>
-
-<br>
-
 Product Management Page
 
 <details><summary>Desktop</summary>
@@ -202,6 +190,42 @@ Checkout Success Page
 
 <details><summary>Mobile</summary>
 <img src="static/testing/lh-mob-checkout-success.jpg" width="800">
+</details>
+
+<br>
+
+Contact Us Page
+
+<details><summary>Desktop</summary>
+<img src="static/testing/lh-contact-desktop.jpg" width="800">
+</details>
+
+<details><summary>Mobile</summary>
+<img src="static/testing/lh-contact-mob.jpg" width="800">
+</details>
+
+<br>
+
+Newsletter Page
+
+<details><summary>Desktop</summary>
+<img src="static/testing/lh-newsletter-desktop.jpg" width="800">
+</details>
+
+<details><summary>Mobile</summary>
+<img src="static/testing/lh-newsletter-mob.jpg" width="800">
+</details>
+
+<br>
+
+Wishlist Page
+
+<details><summary>Desktop</summary>
+<img src="static/testing/lh-wishlist-desktop.jpg" width="800">
+</details>
+
+<details><summary>Mobile</summary>
+<img src="static/testing/lh-wishlist-mob.jpg" width="800">
 </details>
 
 <br>
