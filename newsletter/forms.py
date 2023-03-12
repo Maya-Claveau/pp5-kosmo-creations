@@ -15,7 +15,5 @@ class NewsletterForm(forms.ModelForm):
         subscriber = Subscription.objects.filter(email__iexact=email)
         if subscriber.exists():
             raise forms.ValidationError(
-                "This email already subscribed!"
-                "Please make sure you have entered the correct email address!"
-                )
+                "This email already subscribed!")
         return email
